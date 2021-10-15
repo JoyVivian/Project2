@@ -24,7 +24,7 @@ public class Player {
     return name;
   }
 
-  Player(String name) throws IllegalArgumentException {
+  public Player(String name) throws IllegalArgumentException {
     if (name == null) {
       throw new IllegalArgumentException("The name of a player can not be null.");
     }
@@ -75,6 +75,7 @@ public class Player {
       enhancedStrength += gear.getAffectedAttrs()[0];
     }
     enhancedStrength += this.strength;
+    enhancedStrength = enhancedStrength < 0 ? 0 : enhancedStrength;
     return enhancedStrength;
   }
 
@@ -84,6 +85,7 @@ public class Player {
       enhancedConstitution += gear.getAffectedAttrs()[1];
     }
     enhancedConstitution += this.constitution;
+    enhancedConstitution = enhancedConstitution < 0 ? 0 : enhancedConstitution;
     return enhancedConstitution;
   }
 
@@ -93,6 +95,7 @@ public class Player {
       enhancedDexterity += gear.getAffectedAttrs()[2];
     }
     enhancedDexterity += this.dexterity;
+    enhancedDexterity = enhancedDexterity < 0 ? 0 : enhancedDexterity;
     return enhancedDexterity;
   }
 
@@ -102,6 +105,7 @@ public class Player {
       enhancedCharisma += gear.getAffectedAttrs()[3];
     }
     enhancedCharisma += this.charisma;
+    enhancedCharisma = enhancedCharisma < 0 ? 0 : enhancedCharisma;
     return enhancedCharisma;
   }
 
@@ -189,11 +193,13 @@ public class Player {
     return basicInfo;
   }
 
-  public String playerEnhancedInfo() {
+  public String playerEnhancedInfo(String type) {
     //enhanced information.
     String enhancedInfo = String.format("Name: %s, Strength: %s, Constitution: %s, Dexterity: %s, Charisma: %s " +
-                    "Health: %s", this.name, this.getEnhancedStrength(), this.getEnhancedConstitution(),
-            this.getEnhancedDexterity(), this.getEnhancedCharisma(), this.getHealth()
+                    "Health: %s" + " StrikingPower: %s " + "AvoidAbility: %s",
+            this.name, this.getEnhancedStrength(), this.getEnhancedConstitution(),
+            this.getEnhancedDexterity(), this.getEnhancedCharisma(), this.getHealth(),
+            this.getStrikingPower(type), this.getAvoidanceAbility(type)
     );
 
     return enhancedInfo;

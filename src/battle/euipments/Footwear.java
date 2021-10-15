@@ -2,6 +2,7 @@ package battle.euipments;
 
 public class Footwear extends Gear {
   public Footwear(String name, int[] affectedAttrs) {
+    //TODO: Add some constraints here to make sure footwear can only affect dexterity.
     super(name, affectedAttrs);
     this.priority = 1;
   }

@@ -1,6 +1,7 @@
 package battle.euipments;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 
 import battle.utils.RandomFactory;
@@ -10,49 +11,49 @@ public class Bag {
   private ArrayList<Gear> gears = new ArrayList<>();
 
   public Bag() {
-    Headgear headgear1 = new Headgear("fighting headgear", new int[]{0, 25, 0, 0});
-    Headgear headgear2 = new Headgear("stupid headgear", new int[]{0, -100, 0, 0});
+    Headgear headgear1 = new Headgear("fighting headgear", new int[]{0, 2, 0, 0});
+    Headgear headgear2 = new Headgear("stupid headgear", new int[]{0, -1, 0, 0});
     Headgear headgear3 = new Headgear("king headgear", new int[]{0, 666, 0, 0});
-    Headgear headgear4 = new Headgear("ragged header", new int[]{0, -30, 0, 0});
-    Headgear headgear5 = new Headgear("elated header", new int[]{0, 999, 0, 0});
+    Headgear headgear4 = new Headgear("ragged header", new int[]{0, -3, 0, 0});
+    Headgear headgear5 = new Headgear("elated header", new int[]{0, 9, 0, 0});
 
-    Footwear footwear1 = new Footwear("firm footwear", new int[]{0, 0, 74, 0});
-    Footwear footwear2 = new Footwear("cumbersome footwear", new int[]{0, 0, -100, 0});
-    Footwear footwear3 = new Footwear("gorgeous footwear", new int[]{0, 0, 255, 0});
-    Footwear footwear4 = new Footwear("beautiful footwear", new int[]{0, 0, 555, 0});
-    Footwear footwear5 = new Footwear("poor footwear", new int[]{0, 0, -999, 0});
+    Footwear footwear1 = new Footwear("firm footwear", new int[]{0, 0, 4, 0});
+    Footwear footwear2 = new Footwear("cumbersome footwear", new int[]{0, 0, -10, 0});
+    Footwear footwear3 = new Footwear("gorgeous footwear", new int[]{0, 0, 5, 0});
+    Footwear footwear4 = new Footwear("beautiful footwear", new int[]{0, 0, 5, 0});
+    Footwear footwear5 = new Footwear("poor footwear", new int[]{0, 0, -9, 0});
 
-    Belt belt1 = new Belt("lovely belt", new int[]{0, 0, 10, 0}, BeltSize.SMALL);
-    Belt belt2 = new Belt("tight belt", new int[]{0, -50, 0, 0}, BeltSize.SMALL);
-    Belt belt3 = new Belt("gold belt", new int[]{0, 28, 37, 0}, BeltSize.MEDIUM);
-    Belt belt4 = new Belt("heavy belt", new int[]{99, 0, 0, 99}, BeltSize.LARGE);
-    Belt belt5 = new Belt("power belt", new int[]{0, 44, 21, 0}, BeltSize.LARGE);
-    Belt belt6 = new Belt("poor belt", new int[]{0, -11, 0, -32}, BeltSize.LARGE);
+    Belt belt1 = new Belt("lovely belt", new int[]{0, 0, 1, 0}, BeltSize.SMALL);
+    Belt belt2 = new Belt("tight belt", new int[]{0, -5, 0, 0}, BeltSize.SMALL);
+    Belt belt3 = new Belt("gold belt", new int[]{0, 2, 3, 0}, BeltSize.MEDIUM);
+    Belt belt4 = new Belt("heavy belt", new int[]{9, 0, 0, 9}, BeltSize.LARGE);
+    Belt belt5 = new Belt("power belt", new int[]{0, 4, 1, 0}, BeltSize.LARGE);
+    Belt belt6 = new Belt("poor belt", new int[]{0, -1, 0, -2}, BeltSize.LARGE);
     Belt belt7 = new Belt("garbage belt", new int[]{7, 1, 0, 0}, BeltSize.MEDIUM);
-    Belt belt8 = new Belt("cool belt", new int[]{-7, 0, 0, 100}, BeltSize.MEDIUM);
-    Belt belt9 = new Belt("silk belt", new int[]{0, 0, 0, 55}, BeltSize.SMALL);
-    Belt belt10 = new Belt("leather belt", new int[]{0, 0, 23, 0}, BeltSize.SMALL);
+    Belt belt8 = new Belt("cool belt", new int[]{-7, 0, 0, 10}, BeltSize.MEDIUM);
+    Belt belt9 = new Belt("silk belt", new int[]{0, 0, 0, 5}, BeltSize.SMALL);
+    Belt belt10 = new Belt("leather belt", new int[]{0, 0, 2, 0}, BeltSize.SMALL);
     Belt belt11 = new Belt("cloth belt", new int[]{0, -10, -5, 0}, BeltSize.SMALL);
     Belt belt12 = new Belt("iron belt", new int[]{100, 0, 0, 0}, BeltSize.LARGE);
-    Belt belt13 = new Belt("copper belt", new int[]{0, 34, 0, 0}, BeltSize.SMALL);
-    Belt belt14 = new Belt("strong belt", new int[]{12, 23, 0, 0}, BeltSize.LARGE);
-    Belt belt15 = new Belt("silver belt", new int[]{78, 23, 0, 0}, BeltSize.MEDIUM);
+    Belt belt13 = new Belt("copper belt", new int[]{0, 3, 0, 0}, BeltSize.SMALL);
+    Belt belt14 = new Belt("strong belt", new int[]{1, 2, 0, 0}, BeltSize.LARGE);
+    Belt belt15 = new Belt("silver belt", new int[]{7, 2, 0, 0}, BeltSize.MEDIUM);
 
     Potion potion1 = new Potion("APTX 4869", new int[]{0, 0, 0 ,999});
-    Potion potion2 = new Potion("strong medicine", new int[]{66, 0, 0, 0});
-    Potion potion3 = new Potion("painKiller", new int[]{0, 34, 0, 0});
+    Potion potion2 = new Potion("strong medicine", new int[]{6, 0, 0, 0});
+    Potion potion3 = new Potion("painKiller", new int[]{0, 3, 0, 0});
     Potion potion4 = new Potion("small blood medicine", new int[]{0, 1, 0, 0});
-    Potion potion5 = new Potion("toxic", new int[]{0, -100, 0, 0});
-    Potion potion6 = new Potion("large blood medicine", new int[]{0, 100, 0, 0});
+    Potion potion5 = new Potion("toxic", new int[]{0, -1, 0, 0});
+    Potion potion6 = new Potion("large blood medicine", new int[]{0, 1, 0, 0});
     Potion potion7 = new Potion("small charming medicine", new int[]{0, 0, 0, 1});
-    Potion potion8 = new Potion("medium charming medicine", new int[]{0, 0, 0, 10});
-    Potion potion9 = new Potion("trioxide", new int[]{-23, 0, 0, 0});
+    Potion potion8 = new Potion("medium charming medicine", new int[]{0, 0, 0, 1});
+    Potion potion9 = new Potion("trioxide", new int[]{-2, 0, 0, 0});
     Potion potion10 = new Potion("large charming medicine", new int[]{0, 0, 0, 99});
-    Potion potion11 = new Potion("small dexterity medicine", new int[]{0, 0, 14, 0});
-    Potion potion12 = new Potion("alcohol", new int[]{0, 0, -50, 0});
-    Potion potion13 = new Potion("medium dexterity medicine", new int[]{0, 0, 30, 0});
-    Potion potion14 = new Potion("large dexterity medicine", new int[]{0, 0, 60, 0});
-    Potion potion15 = new Potion("strength medicine", new int[]{13, 0, 0, 0});
+    Potion potion11 = new Potion("small dexterity medicine", new int[]{0, 0, 1, 0});
+    Potion potion12 = new Potion("alcohol", new int[]{0, 0, -5, 0});
+    Potion potion13 = new Potion("medium dexterity medicine", new int[]{0, 0, 3, 0});
+    Potion potion14 = new Potion("large dexterity medicine", new int[]{0, 0, 6, 0});
+    Potion potion15 = new Potion("strength medicine", new int[]{3, 0, 0, 0});
 
     gears.add(headgear1);
     gears.add(headgear2);
@@ -104,7 +105,7 @@ public class Bag {
     RandomFactory randomFactory = new RandomFactory();
     RandomValue randomValuesIns = randomFactory.createRandomInstance(type, 0, 39);
 
-    HashSet<Integer> randomIndexes = randomValuesIns.getRandomValues(20);
+    ArrayList<Integer> randomIndexes = randomValuesIns.getRandomValues(20);
     for (int randomValue : randomIndexes) {
       Gear gear = this.gears.get(randomValue);
 

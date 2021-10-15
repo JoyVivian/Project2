@@ -42,4 +42,48 @@ public class Armory {
     int randomIndex = randomValue.getRandomValue();
     return this.weapons.get(randomIndex);
   }
+
+  public ArrayList<Weapon> getAnotherWeapon(String type, ArrayList<Weapon> weapons) {
+    //TODO: Use this function to get another weapon.
+    ArrayList<Weapon> anotherWeapons = new ArrayList<>();
+    if (weapons.size() <= 1) {
+      Weapon weapon = null;
+
+      if (weapons.size() == 1) {
+        weapon = weapons.get(0);
+      }
+
+      for (Weapon weapon1: this.weapons) {
+        if (!weapon1.equals(weapon)) {
+          anotherWeapons.add(weapon1);
+          if (weapon1 instanceof Katanas) {
+            Weapon weapon2 = this.getOneWeapon(type);
+            if (weapon2 instanceof Katanas) {
+              anotherWeapons.add(weapon2);
+            }
+          }
+          break;
+        }
+      }
+    }
+    else {
+      Weapon weapon1 = weapons.get(0);
+      Weapon weapon2 = weapons.get(1);
+
+      for (Weapon weapon: this.weapons) {
+        if (!weapon.equals(weapon1) && !weapon.equals(weapon2)) {
+          anotherWeapons.add(weapon);
+          if (weapon instanceof Katanas) {
+            Weapon anotherWeapon = this.getOneWeapon(type);
+            if (weapon2 instanceof Katanas) {
+              anotherWeapons.add(anotherWeapon);
+            }
+          }
+        }
+        break;
+      }
+    }
+
+    return anotherWeapons;
+  }
 }

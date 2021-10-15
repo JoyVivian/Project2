@@ -20,13 +20,15 @@ public class FalseRandom implements RandomValue{
   }
 
   @Override
-  public HashSet<Integer> getRandomValues(int num) {
-    HashSet<Integer> playerRandom = new HashSet<>();
+  public ArrayList<Integer> getRandomValues(int num) {
+    ArrayList<Integer> playerRandom = new ArrayList<>();
 
     int i = 0;
-    while (i < num * 2) {
+    int index = 0;
+    while (index < num) {
       playerRandom.add(i);
       i += 2;
+      index++;
     }
 
     return playerRandom;

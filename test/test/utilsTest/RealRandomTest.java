@@ -3,10 +3,12 @@ package test.utilsTest;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 
 import battle.euipments.Headgear;
 import battle.utils.RealRandom;
+import battle.weapons.Armory;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
@@ -39,7 +41,7 @@ public class RealRandomTest {
   @Test
   public void getRandomValues() {
     int num = 20;
-    HashSet<Integer> randomValues = randomValue3.getRandomValues(num);
+    ArrayList<Integer> randomValues = randomValue3.getRandomValues(num);
 
     for (int randomValue : randomValues) {
       assertEquals(true, randomValue >= 0 && randomValue <= 39);

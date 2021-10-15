@@ -3,6 +3,7 @@ package battle.euipments;
 public class Potion extends Gear {
 
   public Potion(String name, int[] affectedAttrs) {
+    //TODO: Add some constraints here to make sure that it only affect one attr.
     super(name, affectedAttrs);
     this.priority = 3;
   }

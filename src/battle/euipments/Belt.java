@@ -5,7 +5,8 @@ import java.util.Arrays;
 public class Belt extends Gear {
   private BeltSize beltSize;
 
-  Belt(String name, int[] affectedAttrs, BeltSize beltSize) {
+  public Belt(String name, int[] affectedAttrs, BeltSize beltSize) {
+    //TODO: Add some constraints here to make sure only affect two attrs.
     super(name, affectedAttrs);
     this.priority = 2;
     this.beltSize = beltSize;

@@ -35,11 +35,11 @@ public class Driver {
     System.out.println("The information for two players when they wear gears and use a weapon: \n");
 
     System.out.println("The information for the first player: ");
-    System.out.println(player1.playerEnhancedInfo());
+    System.out.println(player1.playerEnhancedInfo("RealRandom"));
     System.out.println("\n");
 
     System.out.println("The information for the second player: ");
-    System.out.println(player2.playerEnhancedInfo());
+    System.out.println(player2.playerEnhancedInfo("RealRandom"));
 
     System.out.println("The information when they fight: \n");
     System.out.println(battle.fight("RealRandom"));

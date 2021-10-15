@@ -30,15 +30,12 @@ public class FalseRandomTest {
   public void getRandomValues() {
     int num = 20;
 
-    HashSet<Integer> randomValues = falseRandom.getRandomValues(num);
-    ArrayList<Integer> playersRandom = new ArrayList<>(randomValues);
-
-    Collections.sort(playersRandom);
+    ArrayList<Integer> randomValues = falseRandom.getRandomValues(num);
 
     int i = 0;
     int index = 0;
     while (index < num) {
-      assertEquals(i, (int) playersRandom.get(index));
+      assertEquals(i, (int) randomValues.get(index));
       i += 2;
       index++;
     }

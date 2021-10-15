@@ -3,16 +3,21 @@ package test;
 import org.junit.Before;
 import org.junit.Test;
 
+import battle.Player;
+
 import static org.junit.Assert.*;
 
 public class PlayerTest {
+  private Player player;
 
   @Before
   public void setUp() throws Exception {
+    player = new Player("Bang Liu");
   }
 
   @Test
   public void getName() {
+    assertEquals("Bang Liu", player.getName());
   }
 
   @Test

@@ -18,7 +18,7 @@ public class Battle {
   private Bag equipmentBag;
   private Armory armory;
 
-  Battle(ArrayList<Player> players, Bag equipmentBag, Armory armory) {
+  public Battle(ArrayList<Player> players, Bag equipmentBag, Armory armory) {
     this.players = players;
     this.equipmentBag = equipmentBag;
     this.armory = armory;
@@ -95,19 +95,25 @@ public class Battle {
     Player player1 = this.players.get(0);
     Player player2 = this.players.get(1);
 
+    //TODO: it will always return the upperbound and cause two players have the same weapon.
     ArrayList<Weapon> weapons1 = this.getOneWeapon(type);
-    ArrayList<Weapon> weapons2 = this.getOneWeapon(type);
+    ArrayList<Weapon> weapons2 = this.getRemainWeapon(type, weapons1);
 
-    //Make sure that two players will get different weapons.
-    while (weapons2.equals(weapons1)) {
-      weapons2 = this.getOneWeapon(type);
-    }
+    //Make sure that two players will get different weapons.ß
+//    while (weapons2.equals(weapons1)) {
+//      weapons2 = this.getOneWeapon(type);
+//    }
 
     player1.setWeapon(weapons1);
     player2.setWeapon(weapons2);
 
     return String.format("Weapon for Player1: %s\n Weapon for Player2: %s"
             , weapons1.toString(), weapons2.toString());
+  }
+
+  private ArrayList<Weapon> getRemainWeapon(String type, ArrayList<Weapon> weapons) {
+    ArrayList<Weapon> remainWeapons = armory.getAnotherWeapon(type, weapons);
+    return remainWeapons;
   }
 
   private ArrayList<Weapon> getOneWeapon(String type) {
@@ -129,7 +135,9 @@ public class Battle {
     Player player1 = this.players.get(0);
     Player player2 = this.players.get(1);
 
-    while (player1.getHealth() > 0 && player2.getHealth() > 0) {
+    int roundCount = 0;
+
+    while (player1.getHealth() > 0 && player2.getHealth() > 0 && roundCount < 100) {
       if (player1.getEnhancedCharisma() >= player2.getEnhancedCharisma()) {
         fightInfo += this.attack(player1, player2, type);
         fightInfo += this.attack(player2, player1, type);
@@ -137,11 +145,14 @@ public class Battle {
         fightInfo += this.attack(player2, player1, type);
         fightInfo += this.attack(player1, player2, type);
       }
+      roundCount++;
     }
 
-    if (player1.getHealth() <= 0) {
+    if (player1.getHealth() > 0 && player2.getHealth() > 0 && roundCount >= 100) {
+      fightInfo += String.format("The match come to a draw.");
+    }else if (player1.getHealth() <= 0 && player2.getHealth() > 0) {
       fightInfo += String.format("Player %s is the winner.\n", player2.getName());
-    } else {
+    } else if (player2.getHealth() <= 0 && player1.getHealth() > 0){
       fightInfo += String.format("Player %s is the winner.\n", player1.getName());
     }
 
@@ -151,7 +162,8 @@ public class Battle {
   private String attack(Player firstHand, Player secondHand, String type) {
     String attackInfo = "";
     if (firstHand.getStrikingPower(type) > secondHand.getAvoidanceAbility(type)) {
-      int actualDamage = firstHand.getPotentialDamage(type) - secondHand.getConstitution();
+      int actualDamage = firstHand.getPotentialDamage(type) - secondHand.getEnhancedConstitution();
+      actualDamage = actualDamage < 0 ? 0 : actualDamage;
       secondHand.setHealth(secondHand.getHealth() - actualDamage);
       attackInfo += String.format("Player %s attack Player %s and the damage is:%s\n",
               firstHand.getName(), secondHand.getName(), Integer.valueOf(actualDamage));
