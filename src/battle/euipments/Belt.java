@@ -31,12 +31,9 @@ public class Belt extends Gear {
     return beltSize;
   }
 
+
   @Override
   public String toString() {
-    return "Belt{" +
-            "beltSize=" + beltSize +
-            ", name='" + name + '\'' +
-            ", affectedAttrs=" + Arrays.toString(affectedAttrs) +
-            '}';
+    return super.toString() + String.format("BeltSize = %s", this.beltSize) + "\n";
   }
 }

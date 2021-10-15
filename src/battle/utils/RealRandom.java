@@ -1,6 +1,7 @@
 package battle.utils;
 
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Random;
 
 public class RealRandom implements RandomValue {
@@ -32,5 +33,18 @@ public class RealRandom implements RandomValue {
     }
 
     return randomValues;
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    RealRandom that = (RealRandom) o;
+    return lowerBound == that.lowerBound && upperBound == that.upperBound;
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(lowerBound, upperBound);
   }
 }

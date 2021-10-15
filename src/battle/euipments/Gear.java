@@ -44,10 +44,10 @@ public abstract class Gear implements InterfaceGear {
 
   @Override
   public String toString() {
-    return "Gear{" +
+    return "Gear{" + "Type = " + this.getClass().toString() + ", " +
             "name='" + name + '\'' +
             ", affectedAttrs=" + Arrays.toString(affectedAttrs) +
-            '}';
+            '}' + "\n";
   }
 
   @Override

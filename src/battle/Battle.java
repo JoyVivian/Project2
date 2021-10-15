@@ -48,8 +48,8 @@ public class Battle {
     player2.setHealth(player2.getEnhancedStrength() + player2.getEnhancedConstitution() +
             player2.getEnhancedDexterity() + player2.getEnhancedCharisma());
 
-    return String.format("Gears for Player1: %s\nGears for Player2: %s"
-            , this.filterGears(player1Gears), this.filterGears(player2Gears));
+    return String.format("Gears for Player1: \n %s \n Gears for Player2: \n %s \n"
+            , filteredPlayer1Gears, filteredPlayer2Gears);
   }
 
   private ArrayList<Gear> filterGears(ArrayList<Gear> playerGears) {
