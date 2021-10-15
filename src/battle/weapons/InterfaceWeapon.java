@@ -1,4 +1,4 @@
-package battle;
+package battle.weapons;
 
 public interface InterfaceWeapon {
   public String getName();
