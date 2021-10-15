@@ -24,24 +24,24 @@ public class Player {
     return name;
   }
 
-  public Player(String name) throws IllegalArgumentException {
+  public Player(String name, String type) throws IllegalArgumentException {
     if (name == null) {
       throw new IllegalArgumentException("The name of a player can not be null.");
     }
 
     this.name = name;
-    this.strength = this.getDice();
-    this.constitution = this.getDice();
-    this.dexterity = this.getDice();
-    this.charisma = this.getDice();
+    this.strength = this.getDice(type);
+    this.constitution = this.getDice(type);
+    this.dexterity = this.getDice(type);
+    this.charisma = this.getDice(type);
 
     this.health = this.getEnhancedStrength() + this.getEnhancedConstitution()
             + this.getEnhancedDexterity() + this.getCharisma();
   }
 
-  private int getDice() {
+  private int getDice(String type) {
     RandomFactory randomFactory = new RandomFactory();
-    RandomValue randomValueIns = randomFactory.createRandomInstance("RealRandom", 1, 6);
+    RandomValue randomValueIns = randomFactory.createRandomInstance(type, 1, 6);
     int randomValue = randomValueIns.getRandomValue();
     while (randomValue == 1) {
       randomValue = randomValueIns.getRandomValue();
@@ -128,25 +128,23 @@ public class Player {
   }
 
   public int getStrikingPower(String type) {
-    int[] tmpAttrs = this.getTempAttrs();
+
 
     RandomFactory randomFactory = new RandomFactory();
     RandomValue randomValueIns = randomFactory.createRandomInstance(type, 1, 10);
     int randomValue = randomValueIns.getRandomValue();
 
-    int strikingPower = this.strength + tmpAttrs[0] + randomValue;
+    int strikingPower = this.getEnhancedStrength() + randomValue;
 
     return strikingPower;
   }
 
   public int getAvoidanceAbility(String type) {
-    int[] tmpAttrs = this.getTempAttrs();
-
     RandomFactory randomFactory = new RandomFactory();
     RandomValue randomValueIns = randomFactory.createRandomInstance(type, 1, 6);
     int randomValue = randomValueIns.getRandomValue();
 
-    int avoidanceAbility = this.dexterity + tmpAttrs[2] + randomValue;
+    int avoidanceAbility = this.getEnhancedDexterity() + randomValue;
 
     return avoidanceAbility;
   }
@@ -171,7 +169,7 @@ public class Player {
 
     }
 
-    potentialDamage += this.getStrikingPower(type);
+    potentialDamage += this.getEnhancedStrength();
     return potentialDamage;
   }
 

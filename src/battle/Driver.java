@@ -65,8 +65,8 @@ public class Driver {
             "One is called Bang Liu, another one is called Yu Xiang. They fight for their faith and" +
             "the throne. Let's see who will have a good luck and win the match");
 
-    Player player1 = new Player("Bang Liu");
-    Player player2 = new Player("Yu Xiang");
+    Player player1 = new Player("Bang Liu", "RealRandom");
+    Player player2 = new Player("Yu Xiang", "RealRandom");
 
     match(player1, player2);
   }
