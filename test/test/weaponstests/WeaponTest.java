@@ -26,7 +26,7 @@ public class WeaponTest {
   @Before
   public void setUp() throws Exception {
     axe = new Axe("small axe", "FalseRandom");
-    broadSwords =  new Boradswords("golden sword", "FalseRandom");
+    broadSwords = new Boradswords("golden sword", "FalseRandom");
     flail = new Flail("silver flail", "FalseRandom");
     katanas = new Katanas("heavy katanas", "FalseRandom");
     twoHandedSwords = new TwoHandedSwords("super twohandswords", "FalseRandom");
@@ -83,35 +83,35 @@ public class WeaponTest {
     try {
       new Axe(null, null);
       fail("The instance above should throw an IAE");
-    }catch (Exception e) {
+    } catch (Exception e) {
       //test successful.
     }
 
     try {
       new Boradswords(null, null);
       fail("The instance above should throw an IAE");
-    }catch (Exception e) {
+    } catch (Exception e) {
       //test successful.
     }
 
     try {
       new Flail(null, null);
       fail("The instance above should throw an IAE");
-    }catch (Exception e) {
+    } catch (Exception e) {
       //test successful.
     }
 
     try {
       new Katanas(null, null);
       fail("The instance above should throw an IAE");
-    }catch (Exception e) {
+    } catch (Exception e) {
       //test successful.
     }
 
     try {
       new TwoHandedSwords(null, null);
       fail("The instance above should throw an IAE");
-    }catch (Exception e) {
+    } catch (Exception e) {
       //test successful.
     }
   }

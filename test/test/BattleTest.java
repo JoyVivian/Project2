@@ -108,7 +108,7 @@ public class BattleTest {
   @Test
   public void assignWeapon() {
     assertEquals("Weapon for Player1: [Weapon{name='powerful flail', damage=12}]\n" +
-            " Weapon for Player2: [Weapon{name='sharp katanas', damage=6}]",
+                    " Weapon for Player2: [Weapon{name='sharp katanas', damage=6}]",
             battle.assignWeapon("FalseRandom"));
   }
 
@@ -322,7 +322,7 @@ public class BattleTest {
     try {
       new Battle(null, null, null);
       fail("The instance above should throw an IAE");
-    }catch (Exception e) {
+    } catch (Exception e) {
       //test successful.
     }
   }

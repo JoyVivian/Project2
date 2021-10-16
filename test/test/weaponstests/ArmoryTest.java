@@ -32,7 +32,7 @@ public class ArmoryTest {
     try {
       new Armory(null);
       fail("The above instance should throw an IAE");
-    }catch (Exception e) {
+    } catch (Exception e) {
       //test successful.
     }
   }

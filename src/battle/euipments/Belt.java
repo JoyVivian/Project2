@@ -14,7 +14,7 @@ public class Belt extends Gear {
    * @param affectedAttrs An array that represents a player's four basic abilities separately.
    * @param beltSize      BeltSize Enum to represent the size of the belt object.
    */
-  public Belt(String name, int[] affectedAttrs, BeltSize beltSize) throws IllegalArgumentException{
+  public Belt(String name, int[] affectedAttrs, BeltSize beltSize) throws IllegalArgumentException {
     super(name, affectedAttrs);
 
     if (beltSize == null) {

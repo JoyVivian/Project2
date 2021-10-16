@@ -2,6 +2,7 @@ package battle.euipments;
 
 import battle.utils.RandomFactory;
 import battle.utils.RandomValue;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -115,7 +116,7 @@ public class Bag {
    * @param type Represents generating random values for game logic or for tests.
    * @return An ArrayList of 20 randomly choosed gears.
    */
-  public List<Gear> getGears(String type) throws IllegalArgumentException{
+  public List<Gear> getGears(String type) throws IllegalArgumentException {
     if (type == null || type.isEmpty()) {
       throw new IllegalArgumentException("RandomValue instance must hava a type.");
     }
@@ -141,7 +142,7 @@ public class Bag {
    * @param usedGears An ArrayList of used gears.
    * @return An ArrayList of 20 remained gears.
    */
-  public List<Gear> getRemainGears(List<Gear> usedGears) throws IllegalArgumentException{
+  public List<Gear> getRemainGears(List<Gear> usedGears) throws IllegalArgumentException {
     if (usedGears == null) {
       throw new IllegalArgumentException("usedGears can not be null.");
     }

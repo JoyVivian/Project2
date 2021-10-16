@@ -12,6 +12,15 @@ public abstract class Gear implements InterfaceGear {
   protected int[] affectedAttrs;
   protected int priority;
 
+  /**
+   * A constructor for Gear class that is used to
+   * build Gear objects.
+   *
+   * @param name          The name of the Gear objects.
+   * @param affectedAttrs An array that contains values
+   *                      that can affect the player's four abilities separately.
+   * @throws IllegalArgumentException When name or affectAttrs is null, it will be called.
+   */
   public Gear(String name, int[] affectedAttrs) throws IllegalArgumentException {
     if (name == null || affectedAttrs == null) {
       throw new IllegalArgumentException("name and affectedAttrs can not be null.");

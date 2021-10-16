@@ -6,6 +6,7 @@ import battle.utils.RandomValue;
 import battle.weapons.Flail;
 import battle.weapons.TwoHandedSwords;
 import battle.weapons.Weapon;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -246,13 +247,13 @@ public class Player {
         } else {
           potentialDamage += weapon.getDamage(type);
         }
-      }else {
+      } else {
         potentialDamage += weapon.getDamage(type);
       }
 
     }
 
-    potentialDamage += this.getEnhancedStrength() ;
+    potentialDamage += this.getEnhancedStrength();
     return potentialDamage;
   }
 
@@ -261,7 +262,7 @@ public class Player {
    *
    * @param weapon An ArrayList of Weapon that should assign to player.
    */
-  public void setWeapon(List<Weapon> weapon) throws IllegalArgumentException{
+  public void setWeapon(List<Weapon> weapon) throws IllegalArgumentException {
     if (weapon == null) {
       throw new IllegalArgumentException("weapon should not be null");
     }

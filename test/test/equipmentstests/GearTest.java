@@ -119,7 +119,7 @@ public class GearTest {
             " affectedAttrs=[1, 0, 1, 0]}\n" +
             "BeltSize = LARGE\n", belt.toString());
     assertEquals("Gear{Type = class battle.euipments.Footwear, name='fast footwear', " +
-                    "affectedAttrs=[0, 0, 21, 0]}\n", footwear.toString());
+            "affectedAttrs=[0, 0, 21, 0]}\n", footwear.toString());
     assertEquals("Gear{Type = class battle.euipments.Headgear, " +
             "name='stupid headwear', affectedAttrs=[0, -50, 0, 0]}\n", headgear.toString());
     assertEquals("Gear{Type = class battle.euipments.Potion, name='APTX 4869'," +
@@ -159,28 +159,28 @@ public class GearTest {
     try {
       new Belt(null, null, null);
       fail("The instance above should throw an IAE");
-    }catch (Exception e) {
+    } catch (Exception e) {
       //test successful.
     }
 
     try {
       new Footwear(null, null);
       fail("The instance above should throw an IAE");
-    }catch (Exception e) {
+    } catch (Exception e) {
       //test successful.
     }
 
     try {
       new Headgear(null, null);
       fail("The instance above should throw an IAE");
-    }catch (Exception e) {
+    } catch (Exception e) {
       //test successful.
     }
 
     try {
       new Potion(null, null);
       fail("The instance above should throw an IAE");
-    }catch (Exception e) {
+    } catch (Exception e) {
       //test successful.
     }
   }

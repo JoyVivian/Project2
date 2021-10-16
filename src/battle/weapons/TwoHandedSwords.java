@@ -14,7 +14,7 @@ public class TwoHandedSwords extends Weapon {
    * @param name The name of the TwoHandedSwords object.
    * @param type Represents which RandomValue object to generate.
    */
-  public TwoHandedSwords(String name, String type) throws IllegalArgumentException{
+  public TwoHandedSwords(String name, String type) throws IllegalArgumentException {
     super(name);
 
     if (type == null || type.isEmpty()) {

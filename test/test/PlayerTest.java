@@ -265,7 +265,7 @@ public class PlayerTest {
     try {
       new Player(null, null);
       fail("The instance above should throw an IAE");
-    }catch (Exception e) {
+    } catch (Exception e) {
       //test successful.
     }
   }

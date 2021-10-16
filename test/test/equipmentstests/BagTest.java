@@ -138,16 +138,16 @@ public class BagTest {
   @Test
   public void testIAE() {
     try {
-     bag.getGears(null);
-     fail("The instance above should throw an IAE");
-    }catch (Exception e) {
+      bag.getGears(null);
+      fail("The instance above should throw an IAE");
+    } catch (Exception e) {
       //test successful.
     }
 
     try {
       bag.getRemainGears(null);
       fail("The instance above should throw an IAE");
-    }catch (Exception e) {
+    } catch (Exception e) {
       //test successful.
     }
   }

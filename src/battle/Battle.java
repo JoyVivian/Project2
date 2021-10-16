@@ -9,6 +9,7 @@ import battle.euipments.Potion;
 import battle.weapons.Armory;
 import battle.weapons.Katanas;
 import battle.weapons.Weapon;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -30,7 +31,8 @@ public class Battle {
    * @param equipmentBag An ArrayList of gears that can be assigned to players.
    * @param armory       An ArrayList of weapons that can be assigned to players.
    */
-  public Battle(ArrayList<Player> players, Bag equipmentBag, Armory armory) throws IllegalArgumentException {
+  public Battle(ArrayList<Player> players, Bag equipmentBag, Armory armory)
+          throws IllegalArgumentException {
     if (players == null || equipmentBag == null || armory == null) {
       throw new IllegalArgumentException("name, equimentBag, " +
               "armory should not be null.");
