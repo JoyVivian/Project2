@@ -1,6 +1,7 @@
 package battle.utils;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import java.util.Random;
 
@@ -24,7 +25,7 @@ public class RealRandom implements RandomValue {
   }
 
   @Override
-  public ArrayList<Integer> getRandomValues(int num) {
+  public List<Integer> getRandomValues(int num) {
     ArrayList<Integer> randomValues = new ArrayList<>();
 
     //Generate num different random numbers.

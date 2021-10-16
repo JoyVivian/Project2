@@ -4,6 +4,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.List;
+
 import battle.utils.FalseRandom;
 
 
@@ -30,7 +32,7 @@ public class FalseRandomTest {
   public void getRandomValues() {
     int num = 20;
 
-    ArrayList<Integer> randomValues = falseRandom.getRandomValues(num);
+    List<Integer> randomValues = falseRandom.getRandomValues(num);
 
     int i = 0;
     int index = 0;

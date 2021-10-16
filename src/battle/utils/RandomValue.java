@@ -1,6 +1,6 @@
 package battle.utils;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * An interface of RandomValue that shows what functions
@@ -10,5 +10,5 @@ import java.util.ArrayList;
 public interface RandomValue {
   public int getRandomValue();
 
-  public ArrayList<Integer> getRandomValues(int num);
+  public List<Integer> getRandomValues(int num);
 }

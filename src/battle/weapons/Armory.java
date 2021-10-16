@@ -3,6 +3,7 @@ package battle.weapons;
 import battle.utils.RandomFactory;
 import battle.utils.RandomValue;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * This is a class to generate Armory instances.
@@ -76,7 +77,7 @@ public class Armory {
    * @param weapons An ArrayList of chose weapons.
    * @return An ArrayList of weapon that could be assign to another player.
    */
-  public ArrayList<Weapon> getAnotherWeapon(String type, ArrayList<Weapon> weapons) {
+  public List<Weapon> getAnotherWeapon(String type, List<Weapon> weapons) {
     if (type == null || type.isEmpty()) {
       throw new IllegalArgumentException("RandomValue instance must hava a type.");
     }

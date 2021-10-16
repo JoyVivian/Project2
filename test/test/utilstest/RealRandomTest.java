@@ -4,6 +4,7 @@ package test.utilstest;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 import battle.utils.RealRandom;
@@ -43,7 +44,7 @@ public class RealRandomTest {
   @Test
   public void getRandomValues() {
     int num = 20;
-    ArrayList<Integer> randomValues = randomValue3.getRandomValues(num);
+    List<Integer> randomValues = randomValue3.getRandomValues(num);
 
     for (int randomValue : randomValues) {
       assertEquals(true, randomValue >= 0 && randomValue <= 39);

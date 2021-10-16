@@ -1,6 +1,7 @@
 package battle.utils;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -24,8 +25,8 @@ public class FalseRandom implements RandomValue {
   }
 
   @Override
-  public ArrayList<Integer> getRandomValues(int num) {
-    ArrayList<Integer> playerRandom = new ArrayList<>();
+  public List<Integer> getRandomValues(int num) {
+    List<Integer> playerRandom = new ArrayList<>();
 
     int i = 0;
     int index = 0;
@@ -35,7 +36,7 @@ public class FalseRandom implements RandomValue {
       index++;
     }
 
-    return (ArrayList<Integer>) playerRandom.clone();
+    return (List<Integer>) ((ArrayList<Integer>) playerRandom).clone();
   }
 
   @Override

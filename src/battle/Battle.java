@@ -11,6 +11,7 @@ import battle.weapons.Katanas;
 import battle.weapons.Weapon;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 /**
  * Battle has two players and one equipment bag and one armory.
@@ -54,16 +55,16 @@ public class Battle {
     Player player1 = this.players.get(0);
 
 
-    ArrayList<Gear> player1Gears = equipmentBag.getGears(type);
-    ArrayList<Gear> filteredPlayer1Gears = this.filterGears(player1Gears);
+    List<Gear> player1Gears = equipmentBag.getGears(type);
+    List<Gear> filteredPlayer1Gears = this.filterGears(player1Gears);
 
     Collections.sort(filteredPlayer1Gears);
     player1.setGears(filteredPlayer1Gears);
 
     //Make sure that two players use different gears.
     Player player2 = this.players.get(1);
-    ArrayList<Gear> player2Gears = equipmentBag.getRemainGears(player1Gears);
-    ArrayList<Gear> filteredPlayer2Gears = this.filterGears(player2Gears);
+    List<Gear> player2Gears = equipmentBag.getRemainGears(player1Gears);
+    List<Gear> filteredPlayer2Gears = this.filterGears(player2Gears);
     Collections.sort(filteredPlayer2Gears);
     player2.setGears(filteredPlayer2Gears);
 
@@ -77,7 +78,7 @@ public class Battle {
             filteredPlayer1Gears, filteredPlayer2Gears);
   }
 
-  private ArrayList<Gear> filterGears(ArrayList<Gear> playerGears) throws IllegalArgumentException {
+  private List<Gear> filterGears(List<Gear> playerGears) throws IllegalArgumentException {
     if (playerGears == null) {
       throw new IllegalArgumentException("playerGears should not be null.");
     }
@@ -142,8 +143,8 @@ public class Battle {
     Player player1 = this.players.get(0);
     Player player2 = this.players.get(1);
 
-    ArrayList<Weapon> weapons1 = this.getOneWeapon(type);
-    ArrayList<Weapon> weapons2 = this.getRemainWeapon(type, weapons1);
+    List<Weapon> weapons1 = this.getOneWeapon(type);
+    List<Weapon> weapons2 = this.getRemainWeapon(type, weapons1);
 
     player1.setWeapon(weapons1);
     player2.setWeapon(weapons2);
@@ -152,8 +153,8 @@ public class Battle {
             weapons1.toString(), weapons2.toString());
   }
 
-  private ArrayList<Weapon> getRemainWeapon(String type, ArrayList<Weapon> weapons) {
-    ArrayList<Weapon> remainWeapons = armory.getAnotherWeapon(type, weapons);
+  private ArrayList<Weapon> getRemainWeapon(String type, List<Weapon> weapons) {
+    ArrayList<Weapon> remainWeapons = (ArrayList<Weapon>) armory.getAnotherWeapon(type, weapons);
     return (ArrayList<Weapon>) remainWeapons.clone();
   }
 

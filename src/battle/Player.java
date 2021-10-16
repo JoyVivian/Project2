@@ -8,6 +8,7 @@ import battle.weapons.TwoHandedSwords;
 import battle.weapons.Weapon;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 /**
  * This class is used to create player instances.
@@ -23,8 +24,8 @@ public class Player {
   private int dexterity;
   private int charisma;
   private int health;
-  private ArrayList<Weapon> weapon;
-  private ArrayList<Gear> gears;
+  private List<Weapon> weapon;
+  private List<Gear> gears;
 
   /**
    * A constructor of Player to build Player class.
@@ -260,7 +261,7 @@ public class Player {
    *
    * @param weapon An ArrayList of Weapon that should assign to player.
    */
-  public void setWeapon(ArrayList<Weapon> weapon) throws IllegalArgumentException{
+  public void setWeapon(List<Weapon> weapon) throws IllegalArgumentException{
     if (weapon == null) {
       throw new IllegalArgumentException("weapon should not be null");
     }
@@ -273,7 +274,7 @@ public class Player {
    *
    * @param gears An ArrayList of Gears that should assign to player.
    */
-  public void setGears(ArrayList<Gear> gears) throws IllegalArgumentException {
+  public void setGears(List<Gear> gears) throws IllegalArgumentException {
     if (gears == null) {
       throw new IllegalArgumentException("gears should not be null");
     }
