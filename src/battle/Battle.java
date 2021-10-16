@@ -29,7 +29,12 @@ public class Battle {
    * @param equipmentBag An ArrayList of gears that can be assigned to players.
    * @param armory       An ArrayList of weapons that can be assigned to players.
    */
-  public Battle(ArrayList<Player> players, Bag equipmentBag, Armory armory) {
+  public Battle(ArrayList<Player> players, Bag equipmentBag, Armory armory) throws IllegalArgumentException {
+    if (players == null || equipmentBag == null || armory == null) {
+      throw new IllegalArgumentException("name, equimentBag, " +
+              "armory should not be null.");
+    }
+
     this.players = players;
     this.equipmentBag = equipmentBag;
     this.armory = armory;
@@ -42,6 +47,10 @@ public class Battle {
    * @return A string shows the information of gears that were assigned to each player.
    */
   public String assignGears(String type) {
+    if (type == null || type.isEmpty()) {
+      throw new IllegalArgumentException("RandomValue instance must hava a type.");
+    }
+
     Player player1 = this.players.get(0);
 
 
@@ -68,7 +77,11 @@ public class Battle {
             filteredPlayer1Gears, filteredPlayer2Gears);
   }
 
-  private ArrayList<Gear> filterGears(ArrayList<Gear> playerGears) {
+  private ArrayList<Gear> filterGears(ArrayList<Gear> playerGears) throws IllegalArgumentException {
+    if (playerGears == null) {
+      throw new IllegalArgumentException("playerGears should not be null.");
+    }
+
     ArrayList<Gear> filteredGears = new ArrayList<>();
 
     Boolean isWearedHeadwear = false;
@@ -112,7 +125,7 @@ public class Battle {
       }
     }
 
-    return filteredGears;
+    return (ArrayList<Gear>) filteredGears.clone();
   }
 
   /**
@@ -122,6 +135,10 @@ public class Battle {
    * @return A String shows the information of weapons that were assigned to each player.
    */
   public String assignWeapon(String type) {
+    if (type == null || type.isEmpty()) {
+      throw new IllegalArgumentException("RandomValue instance must hava a type.");
+    }
+
     Player player1 = this.players.get(0);
     Player player2 = this.players.get(1);
 
@@ -137,10 +154,14 @@ public class Battle {
 
   private ArrayList<Weapon> getRemainWeapon(String type, ArrayList<Weapon> weapons) {
     ArrayList<Weapon> remainWeapons = armory.getAnotherWeapon(type, weapons);
-    return remainWeapons;
+    return (ArrayList<Weapon>) remainWeapons.clone();
   }
 
   private ArrayList<Weapon> getOneWeapon(String type) {
+    if (type == null || type.isEmpty()) {
+      throw new IllegalArgumentException("RandomValue instance must hava a type.");
+    }
+
     ArrayList<Weapon> weapons = new ArrayList<>();
     Weapon weapon = armory.getOneWeapon(type);
     weapons.add(weapon);
@@ -150,7 +171,7 @@ public class Battle {
         weapons.add(weapon2);
       }
     }
-    return weapons;
+    return (ArrayList<Weapon>) weapons.clone();
   }
 
   /**
@@ -160,6 +181,10 @@ public class Battle {
    * @return A string contains the fighting information of two players.
    */
   public String fight(String type) {
+    if (type == null || type.isEmpty()) {
+      throw new IllegalArgumentException("RandomValue instance must hava a type.");
+    }
+
     String fightInfo = "";
 
     Player player1 = this.players.get(0);
@@ -190,6 +215,10 @@ public class Battle {
   }
 
   private String attack(Player firstHand, Player secondHand, String type) {
+    if (type == null || type.isEmpty()) {
+      throw new IllegalArgumentException("RandomValue instance must hava a type.");
+    }
+
     String attackInfo = "";
     if (firstHand.getStrikingPower(type) > secondHand.getAvoidanceAbility(type)) {
       int actualDamage = firstHand.getPotentialDamage(type) - secondHand.getEnhancedConstitution();

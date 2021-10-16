@@ -16,8 +16,27 @@ public class Katanas extends Weapon {
    */
   public Katanas(String name, String type) {
     super(name);
+
+    if (type == null || type.isEmpty()) {
+      throw new IllegalArgumentException("RandomValue instance must hava a type.");
+    }
+
     RandomFactory randomFactory = new RandomFactory();
     RandomValue randomValue = randomFactory.createRandomInstance(type, 4, 6);
     this.damage = randomValue.getRandomValue();
+  }
+
+  @Override
+  public int getDamage(String type) {
+
+    if (type == null || type.isEmpty()) {
+      throw new IllegalArgumentException("RandomValue instance must hava a type.");
+    }
+
+    RandomFactory randomFactory = new RandomFactory();
+    RandomValue randomValue = randomFactory.createRandomInstance(type, 4, 6);
+    this.damage = randomValue.getRandomValue();
+
+    return this.damage;
   }
 }

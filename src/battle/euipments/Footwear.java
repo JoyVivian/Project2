@@ -12,8 +12,15 @@ public class Footwear extends Gear {
    * @param affectedAttrs An array that represents a player's four basic abilities separately.
    */
   public Footwear(String name, int[] affectedAttrs) {
-    //TODO: Add some constraints here to make sure footwear can only affect dexterity.
     super(name, affectedAttrs);
+
+    //Make sure that it only affects dexterity.
+    for (int i = 0; i < 4; i++) {
+      if (i != 2 && affectedAttrs[i] != 0) {
+        affectedAttrs[i] = 0;
+      }
+    }
+
     this.priority = 1;
   }
 

@@ -11,6 +11,7 @@ import battle.euipments.Bag;
 import battle.weapons.Armory;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 /**
  * A class that is used to test Player class.
@@ -71,8 +72,8 @@ public class PlayerTest {
     battle.assignGears(randomType);
     battle.assignWeapon(randomType);
 
-    assertEquals(19, player.getEnhancedStrength());
-    assertEquals(16, player2.getEnhancedStrength());
+    assertEquals(159, player.getEnhancedStrength());
+    assertEquals(103, player2.getEnhancedStrength());
   }
 
   @Test
@@ -109,7 +110,7 @@ public class PlayerTest {
     battle.assignGears(randomType);
     battle.assignWeapon(randomType);
 
-    assertEquals(2, player.getEnhancedDexterity());
+    assertEquals(7, player.getEnhancedDexterity());
     assertEquals(14, player2.getEnhancedDexterity());
   }
 
@@ -129,7 +130,7 @@ public class PlayerTest {
     battle.assignWeapon(randomType);
 
     assertEquals(111, player.getEnhancedCharisma());
-    assertEquals(1013, player2.getEnhancedCharisma());
+    assertEquals(1012, player2.getEnhancedCharisma());
   }
 
   @Test
@@ -148,8 +149,8 @@ public class PlayerTest {
     battle.assignWeapon(randomType);
 
     //Striking Power = this.getEnhancedStrength() + rand(1, 10)
-    assertEquals(29, player.getStrikingPower(randomType));
-    assertEquals(26, player2.getStrikingPower(randomType));
+    assertEquals(169, player.getStrikingPower(randomType));
+    assertEquals(113, player2.getStrikingPower(randomType));
   }
 
   @Test
@@ -168,7 +169,7 @@ public class PlayerTest {
     battle.assignWeapon(randomType);
 
     //AvoidanceAbility = this.getEnhancedDexterity() + rand(1, 6)
-    assertEquals(8, player.getAvoidanceAbility(randomType));
+    assertEquals(13, player.getAvoidanceAbility(randomType));
     assertEquals(20, player2.getAvoidanceAbility(randomType));
   }
 
@@ -188,8 +189,8 @@ public class PlayerTest {
     battle.assignWeapon(randomType);
 
     //Potential Damage = this.getEnhancedStrength() + weaponDamage and mind two special weapons.
-    assertEquals(25, player.getPotentialDamage(randomType));
-    assertEquals(16, player2.getPotentialDamage(randomType));
+    assertEquals(165, player.getPotentialDamage(randomType));
+    assertEquals(109, player2.getPotentialDamage(randomType));
   }
 
   @Test
@@ -228,13 +229,14 @@ public class PlayerTest {
     battle.assignGears(randomType);
     battle.assignWeapon(randomType);
 
-    assertEquals("Name: Bang Liu, Strength: 19, Constitution: 17," +
-            " Dexterity: 2, Charisma: 111 Health: 149 StrikingPower: 29 AvoidAbility: 8",
+    assertEquals("Name: Bang Liu, Strength: 159, Constitution: 17, " +
+                    "Dexterity: 7, Charisma: 111 " +
+                    "Health: 294 StrikingPower: 169 AvoidAbility: 13",
             player.playerEnhancedInfo(randomType));
 
-    assertEquals("Name: Yu Xiang, Strength: 16," +
-                    " Constitution: 1, Dexterity: 14," +
-                    " Charisma: 1013 Health: 1044 StrikingPower: 26 AvoidAbility: 20",
+    assertEquals("Name: Yu Xiang, Strength: 103, Constitution: 0, " +
+                    "Dexterity: 14, Charisma: 1012 " +
+                    "Health: 1129 StrikingPower: 113 AvoidAbility: 20",
             player2.playerEnhancedInfo(randomType));
   }
 
@@ -253,8 +255,18 @@ public class PlayerTest {
     battle.assignGears(randomType);
     battle.assignWeapon(randomType);
 
-    assertEquals(149, player.getHealth());
+    assertEquals(294, player.getHealth());
     player.setHealth(12);
     assertEquals(12, player.getHealth());
+  }
+
+  @Test
+  public void testIAE() {
+    try {
+      new Player(null, null);
+      fail("The instance above should throw an IAE");
+    }catch (Exception e) {
+      //test successful.
+    }
   }
 }

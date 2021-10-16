@@ -6,9 +6,9 @@ import java.util.Objects;
  * This is an abstract class of Weapon that contains common fields
  * and common methods for five different weapons.
  */
-public class Weapon implements InterfaceWeapon {
-  protected String name = "";
-  protected int damage = 0;
+public abstract class Weapon implements InterfaceWeapon {
+  protected String name;
+  protected int damage;
 
   /**
    * a constructor for Weapon class that is used to construct
@@ -22,6 +22,7 @@ public class Weapon implements InterfaceWeapon {
       throw new IllegalArgumentException("The name of a weapon can not be null.");
     }
     this.name = name;
+    this.damage = 0;
   }
 
   @Override
@@ -30,9 +31,7 @@ public class Weapon implements InterfaceWeapon {
   }
 
   @Override
-  public int getDamage() {
-    return this.damage;
-  }
+  public abstract int getDamage(String type);
 
   @Override
   public boolean equals(Object o) {

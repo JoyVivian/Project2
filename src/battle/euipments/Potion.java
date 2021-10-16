@@ -13,8 +13,18 @@ public class Potion extends Gear {
    * @param affectedAttrs An array that represents a player's four basic abilities separately.
    */
   public Potion(String name, int[] affectedAttrs) {
-    //TODO: Add some constraints here to make sure that it only affect one attr.
     super(name, affectedAttrs);
+
+    //Make sure it will only affect one of a player's ability.
+    int num = 0;
+    for (int i = 0; i < 4; i++) {
+      if (affectedAttrs[i] != 0) {
+        num ++;
+      }
+      if (num > 1) {
+        affectedAttrs[i] = 0;
+      }
+    }
     this.priority = 3;
   }
 

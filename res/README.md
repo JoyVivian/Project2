@@ -47,8 +47,16 @@ to exit this program.
 ## 6. Designs
 (1) I add two field in Player class to help assign gears and weapons to players.
 
+(2) Made every damage of an attack cause by a weapon random.  
+
 ## 7.Limitations
 Weapons and Gears are hardcode in the constructors.
 
-## 8.Citations
+## 8. Assumptions
+(1) Gears and Weapons are fixed.
+
+(2) When finished a fight, the players' health will roll back and
+new gears and weapons will assign to them to help them fight again.
+
+## 9.Citations
 Factory Method: https://www.geeksforgeeks.org/factory-method-design-pattern-in-java/

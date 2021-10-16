@@ -10,14 +10,20 @@ import java.util.ArrayList;
  * players to choose.
  */
 public class Armory {
-  private ArrayList<Weapon> weapons = new ArrayList<>();
+  private ArrayList<Weapon> weapons;
 
   /**
    * A constructor to construct  Armory instance.
    *
    * @param type Represents which RandomValue object to generate.
    */
-  public Armory(String type) {
+  public Armory(String type) throws IllegalArgumentException {
+    if (type == null || type.isEmpty()) {
+      throw new IllegalArgumentException("RandomValue instance must hava a type.");
+    }
+
+    this.weapons = new ArrayList<>();
+
     Katanas katanas1 = new Katanas("sharp katanas", type);
     Katanas katanas2 = new Katanas("long katanas", type);
 
@@ -52,6 +58,10 @@ public class Armory {
    * @return A weapon instance.
    */
   public Weapon getOneWeapon(String type) {
+    if (type == null || type.isEmpty()) {
+      throw new IllegalArgumentException("RandomValue instance must hava a type.");
+    }
+
     RandomFactory randomFactory = new RandomFactory();
     RandomValue randomValue = randomFactory.createRandomInstance(type, 0, 9);
     int randomIndex = randomValue.getRandomValue();
@@ -67,6 +77,14 @@ public class Armory {
    * @return An ArrayList of weapon that could be assign to another player.
    */
   public ArrayList<Weapon> getAnotherWeapon(String type, ArrayList<Weapon> weapons) {
+    if (type == null || type.isEmpty()) {
+      throw new IllegalArgumentException("RandomValue instance must hava a type.");
+    }
+
+    if (weapons == null) {
+      throw new IllegalArgumentException("usedWeapons cannot be null");
+    }
+
     ArrayList<Weapon> anotherWeapons = new ArrayList<>();
     if (weapons.size() <= 1) {
       Weapon weapon = null;
@@ -105,6 +123,6 @@ public class Armory {
       }
     }
 
-    return anotherWeapons;
+    return (ArrayList<Weapon>) anotherWeapons.clone();
   }
 }

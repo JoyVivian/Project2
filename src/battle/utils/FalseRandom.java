@@ -35,7 +35,7 @@ public class FalseRandom implements RandomValue {
       index++;
     }
 
-    return playerRandom;
+    return (ArrayList<Integer>) playerRandom.clone();
   }
 
   @Override

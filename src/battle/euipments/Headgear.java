@@ -13,8 +13,14 @@ public class Headgear extends Gear {
    * @param affectedAttrs An array that represents a player's four basic abilities separately.
    */
   public Headgear(String name, int[] affectedAttrs) {
-    //TODO: Add some constraints here to make sure that headgear will only affect constitution.
     super(name, affectedAttrs);
+
+    for (int i = 0; i < 4; i++) {
+      if (i != 1 && affectedAttrs[i] != 0) {
+        affectedAttrs[i] = 0;
+      }
+    }
+
     this.priority = 4;
   }
 

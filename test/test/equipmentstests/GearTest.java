@@ -13,6 +13,7 @@ import battle.euipments.Headgear;
 import battle.euipments.Potion;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 /**
  * A class that is used to test the Gear class.
@@ -151,5 +152,36 @@ public class GearTest {
     assertEquals("fast footwear", footwear.getName());
     assertEquals("stupid headwear", headgear.getName());
     assertEquals("APTX 4869", potion.getName());
+  }
+
+  @Test
+  public void testIAE() {
+    try {
+      new Belt(null, null, null);
+      fail("The instance above should throw an IAE");
+    }catch (Exception e) {
+      //test successful.
+    }
+
+    try {
+      new Footwear(null, null);
+      fail("The instance above should throw an IAE");
+    }catch (Exception e) {
+      //test successful.
+    }
+
+    try {
+      new Headgear(null, null);
+      fail("The instance above should throw an IAE");
+    }catch (Exception e) {
+      //test successful.
+    }
+
+    try {
+      new Potion(null, null);
+      fail("The instance above should throw an IAE");
+    }catch (Exception e) {
+      //test successful.
+    }
   }
 }

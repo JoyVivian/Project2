@@ -67,6 +67,28 @@ public class Driver {
     }
   }
 
+  private static void matchWithBareHands(Player player1, Player player2, String randomType) {
+    ArrayList<Player> players = new ArrayList<>();
+    players.add(player1);
+    players.add(player2);
+
+    System.out.println("This is the basic information of two players: \n");
+    System.out.println("The basic information for player1: ");
+    System.out.println(player1.playerBasicInfo());
+    System.out.println("\n");
+    System.out.println("The basic information for player2: ");
+    System.out.println(player2.playerBasicInfo());
+    System.out.println("\n");
+
+    Bag equipmentBag = new Bag();
+    Armory armory = new Armory(randomType);
+    Battle battle = new Battle(players, equipmentBag, armory);
+
+    System.out.println("The information when they fight: \n");
+    System.out.println(battle.fight(randomType));
+
+    System.out.println("\n");
+  }
 
   /**
    * The main function of this model.
@@ -85,6 +107,10 @@ public class Driver {
     Player player1 = new Player("Bang Liu", randomType);
     Player player2 = new Player("Yu Xiang", randomType);
 
+    System.out.println("Players fight with bare hands:\n");
+    matchWithBareHands(player1, player2, randomType);
+    System.out.println("\n");
+    System.out.println("Players fight with gears and weapons");
     match(player1, player2, randomType);
   }
 }

@@ -14,10 +14,28 @@ public class TwoHandedSwords extends Weapon {
    * @param name The name of the TwoHandedSwords object.
    * @param type Represents which RandomValue object to generate.
    */
-  public TwoHandedSwords(String name, String type) {
+  public TwoHandedSwords(String name, String type) throws IllegalArgumentException{
     super(name);
+
+    if (type == null || type.isEmpty()) {
+      throw new IllegalArgumentException("RandomValue instance must hava a type.");
+    }
+
     RandomFactory randomFactory = new RandomFactory();
     RandomValue randomValue = randomFactory.createRandomInstance(type, 8, 12);
     this.damage = randomValue.getRandomValue();
+  }
+
+  @Override
+  public int getDamage(String type) {
+    if (type == null || type.isEmpty()) {
+      throw new IllegalArgumentException("RandomValue instance must hava a type.");
+    }
+
+    RandomFactory randomFactory = new RandomFactory();
+    RandomValue randomValue = randomFactory.createRandomInstance(type, 8, 12);
+    this.damage = randomValue.getRandomValue();
+
+    return this.damage;
   }
 }

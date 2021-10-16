@@ -23,8 +23,8 @@ public class Player {
   private int dexterity;
   private int charisma;
   private int health;
-  private ArrayList<Weapon> weapon = new ArrayList<>();
-  private ArrayList<Gear> gears = new ArrayList<>();
+  private ArrayList<Weapon> weapon;
+  private ArrayList<Gear> gears;
 
   /**
    * A constructor of Player to build Player class.
@@ -38,11 +38,17 @@ public class Player {
       throw new IllegalArgumentException("The name of a player can not be null.");
     }
 
+    if (type == null || type.isEmpty()) {
+      throw new IllegalArgumentException("RandomValue instance must hava a type.");
+    }
+
     this.name = name;
     this.strength = this.getDice(type);
     this.constitution = this.getDice(type);
     this.dexterity = this.getDice(type);
     this.charisma = this.getDice(type);
+    this.weapon = new ArrayList<>();
+    this.gears = new ArrayList<>();
 
     this.health = this.getEnhancedStrength() + this.getEnhancedConstitution()
             + this.getEnhancedDexterity() + this.getCharisma();
@@ -58,6 +64,10 @@ public class Player {
   }
 
   private int getDice(String type) {
+    if (type == null || type.isEmpty()) {
+      throw new IllegalArgumentException("RandomValue instance must hava a type.");
+    }
+
     RandomFactory randomFactory = new RandomFactory();
     RandomValue randomValueIns = randomFactory.createRandomInstance(type, 1, 6);
     int randomValue = randomValueIns.getRandomValue();
@@ -178,6 +188,10 @@ public class Player {
    * @return A Integer contains the player's striking power after wearing gears.
    */
   public int getStrikingPower(String type) {
+    if (type == null || type.isEmpty()) {
+      throw new IllegalArgumentException("RandomValue instance must hava a type.");
+    }
+
     RandomFactory randomFactory = new RandomFactory();
     RandomValue randomValueIns = randomFactory.createRandomInstance(type, 1, 10);
     int randomValue = randomValueIns.getRandomValue();
@@ -193,6 +207,10 @@ public class Player {
    * @return A Integer contains the player's avoidance ability after wearing gears.
    */
   public int getAvoidanceAbility(String type) {
+    if (type == null || type.isEmpty()) {
+      throw new IllegalArgumentException("RandomValue instance must hava a type.");
+    }
+
     RandomFactory randomFactory = new RandomFactory();
     RandomValue randomValueIns = randomFactory.createRandomInstance(type, 1, 6);
     int randomValue = randomValueIns.getRandomValue();
@@ -208,21 +226,27 @@ public class Player {
    * @return A Integer contains the player's potential damage after wearing gears.
    */
   public int getPotentialDamage(String type) {
+    if (type == null || type.isEmpty()) {
+      throw new IllegalArgumentException("RandomValue instance must hava a type.");
+    }
+
     int potentialDamage = 0;
 
     for (Weapon weapon : this.weapon) {
       if (weapon instanceof TwoHandedSwords) {
         if (this.strength < 14) {
-          potentialDamage += weapon.getDamage() / 2;
+          potentialDamage += weapon.getDamage(type) / 2;
         } else {
-          potentialDamage += weapon.getDamage();
+          potentialDamage += weapon.getDamage(type);
         }
       } else if (weapon instanceof Flail) {
         if (this.dexterity < 14) {
-          potentialDamage += weapon.getDamage() / 2;
+          potentialDamage += weapon.getDamage(type) / 2;
         } else {
-          potentialDamage += weapon.getDamage();
+          potentialDamage += weapon.getDamage(type);
         }
+      }else {
+        potentialDamage += weapon.getDamage(type);
       }
 
     }
@@ -236,7 +260,11 @@ public class Player {
    *
    * @param weapon An ArrayList of Weapon that should assign to player.
    */
-  public void setWeapon(ArrayList<Weapon> weapon) {
+  public void setWeapon(ArrayList<Weapon> weapon) throws IllegalArgumentException{
+    if (weapon == null) {
+      throw new IllegalArgumentException("weapon should not be null");
+    }
+
     this.weapon = weapon;
   }
 
@@ -245,7 +273,10 @@ public class Player {
    *
    * @param gears An ArrayList of Gears that should assign to player.
    */
-  public void setGears(ArrayList<Gear> gears) {
+  public void setGears(ArrayList<Gear> gears) throws IllegalArgumentException {
+    if (gears == null) {
+      throw new IllegalArgumentException("gears should not be null");
+    }
     Collections.sort(gears);
     this.gears = gears;
   }
@@ -273,6 +304,10 @@ public class Player {
    *     after they wear gears and use a weapon.
    */
   public String playerEnhancedInfo(String type) {
+    if (type == null || type.isEmpty()) {
+      throw new IllegalArgumentException("RandomValue instance must hava a type.");
+    }
+
     //enhanced information.
     String enhancedInfo = String.format("Name: %s, Strength: %s, Constitution: %s, "
                     + "Dexterity: %s, Charisma: %s "

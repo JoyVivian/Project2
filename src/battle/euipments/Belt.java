@@ -14,9 +14,23 @@ public class Belt extends Gear {
    * @param affectedAttrs An array that represents a player's four basic abilities separately.
    * @param beltSize      BeltSize Enum to represent the size of the belt object.
    */
-  public Belt(String name, int[] affectedAttrs, BeltSize beltSize) {
-    //TODO: Add some constraints here to make sure only affect two attrs.
+  public Belt(String name, int[] affectedAttrs, BeltSize beltSize) throws IllegalArgumentException{
     super(name, affectedAttrs);
+
+    if (beltSize == null) {
+      throw new IllegalArgumentException("BeltSize can not be null.");
+    }
+    //Make sure it only affects two attributes.
+    int num = 0;
+    for (int i = 0; i < 4; i++) {
+      if (affectedAttrs[i] != 0) {
+        num++;
+      }
+      if (num > 2) {
+        affectedAttrs[i] = 0;
+      }
+    }
+
     this.priority = 2;
     this.beltSize = beltSize;
   }

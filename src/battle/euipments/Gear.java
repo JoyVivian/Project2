@@ -8,18 +8,23 @@ import java.util.Objects;
  * common fields and methods for four different gears.
  */
 public abstract class Gear implements InterfaceGear {
-  protected String name = "";
-  protected int[] affectedAttrs = new int[4];
-  protected int priority = 0;
+  protected String name;
+  protected int[] affectedAttrs;
+  protected int priority;
 
-  public Gear(String name, int[] affectedAttrs) {
+  public Gear(String name, int[] affectedAttrs) throws IllegalArgumentException {
+    if (name == null || affectedAttrs == null) {
+      throw new IllegalArgumentException("name and affectedAttrs can not be null.");
+    }
+
     this.name = name;
     this.affectedAttrs = affectedAttrs.clone();
+    this.priority = 0;
   }
 
   @Override
   public int[] getAffectedAttrs() {
-    return this.affectedAttrs;
+    return this.affectedAttrs.clone();
   }
 
 

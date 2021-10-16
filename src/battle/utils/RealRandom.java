@@ -27,7 +27,7 @@ public class RealRandom implements RandomValue {
   public ArrayList<Integer> getRandomValues(int num) {
     ArrayList<Integer> randomValues = new ArrayList<>();
 
-    //Generate 10 different random numbers.
+    //Generate num different random numbers.
     for (int i = 0; i < num; i++) {
       int randomValue = this.getRandomValue();
       while (randomValues.contains(randomValue)) {

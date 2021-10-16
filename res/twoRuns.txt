@@ -1,1080 +1,674 @@
+ /Users/weizhang/Library/Java/JavaVirtualMachines/openjdk-16.0.2/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=51240:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/weizhang/IdeaProjects/Project2/out/production/Project2 battle.Driver
+ Once upon a time, there were two outstanding man with superior military ability.One is called Bang Liu, another one is called Yu Xiang. They fight for their faith andthe throne. Let's see who will have a good luck and win the match
+ Players fight with bare hands:
+
+ This is the basic information of two players:
+
+ The basic information for player1:
+ Name: Bang Liu, Strength: 3, Constitution: 4, Dexterity: 3, Charisma: 3
+
+
+ The basic information for player2:
+ Name: Yu Xiang, Strength: 6, Constitution: 4, Dexterity: 4, Charisma: 5
+
+
+ The information when they fight:
+
+ Player Yu Xiang attack Player Bang Liu and the damage is:2
+ Player Bang Liu attack Player Yu Xiang and the damage is: 0
+ Player Yu Xiang attack Player Bang Liu and the damage is:2
+ Player Bang Liu attack Player Yu Xiang and the damage is:0
+ Player Yu Xiang attack Player Bang Liu and the damage is:2
+ Player Bang Liu attack Player Yu Xiang and the damage is:0
+ Player Yu Xiang attack Player Bang Liu and the damage is: 0
+ Player Bang Liu attack Player Yu Xiang and the damage is: 0
+ Player Yu Xiang attack Player Bang Liu and the damage is:2
+ Player Bang Liu attack Player Yu Xiang and the damage is: 0
+ Player Yu Xiang attack Player Bang Liu and the damage is:2
+ Player Bang Liu attack Player Yu Xiang and the damage is: 0
+ Player Yu Xiang attack Player Bang Liu and the damage is:2
+ Player Bang Liu attack Player Yu Xiang and the damage is: 0
+ Player Yu Xiang attack Player Bang Liu and the damage is:2
+ Player Bang Liu attack Player Yu Xiang and the damage is:0
+ Player Yu Xiang is the winner.
+
+
+
+
+
+ Players fight with gears and weapons
+ This is the basic information of two players:
+
+ The basic information for player1:
+ Name: Bang Liu, Strength: 3, Constitution: 4, Dexterity: 3, Charisma: 3
+
+
+ The basic information for player2:
+ Name: Yu Xiang, Strength: 6, Constitution: 4, Dexterity: 4, Charisma: 5
+
+
+ Gears information for two players:
+ Gears for Player1:
+  [Gear{Type = class battle.euipments.Headgear, name='fighting headgear', affectedAttrs=[0, 2, 0, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='large blood medicine', affectedAttrs=[0, 1, 0, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='medium dexterity medicine', affectedAttrs=[-30, 0, 3, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='painKiller', affectedAttrs=[70, 0, 0, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='strength medicine', affectedAttrs=[3, 0, 0, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='strong medicine', affectedAttrs=[6, 0, 0, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='trioxide', affectedAttrs=[-2, 0, 0, 0]}
+ , Gear{Type = class battle.euipments.Belt, name='copper belt', affectedAttrs=[0, 3, 0, 0]}
+ BeltSize = SMALL
+ , Gear{Type = class battle.euipments.Belt, name='heavy belt', affectedAttrs=[9, 0, 0, 9]}
+ BeltSize = LARGE
+ , Gear{Type = class battle.euipments.Belt, name='strong belt', affectedAttrs=[1, 2, 0, 0]}
+ BeltSize = LARGE
+ , Gear{Type = class battle.euipments.Footwear, name='beautiful footwear', affectedAttrs=[0, 0, 5, 0]}
+ ]
+  Gears for Player2:
+  [Gear{Type = class battle.euipments.Headgear, name='king headgear', affectedAttrs=[0, 666, 0, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='APTX 4869', affectedAttrs=[0, 0, 0, 999]}
+ , Gear{Type = class battle.euipments.Potion, name='alcohol', affectedAttrs=[90, 0, 0, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='large charming medicine', affectedAttrs=[0, 0, 0, 99]}
+ , Gear{Type = class battle.euipments.Potion, name='large dexterity medicine', affectedAttrs=[0, 0, 6, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='medium charming medicine', affectedAttrs=[0, 0, 0, 1]}
+ , Gear{Type = class battle.euipments.Potion, name='small blood medicine', affectedAttrs=[0, 1, 0, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='small charming medicine', affectedAttrs=[28, 0, 0, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='small dexterity medicine', affectedAttrs=[0, 0, 1, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='toxic', affectedAttrs=[0, -1, 0, 0]}
+ , Gear{Type = class battle.euipments.Belt, name='gold belt', affectedAttrs=[0, 2, 3, 0]}
+ BeltSize = MEDIUM
+ , Gear{Type = class battle.euipments.Belt, name='lovely belt', affectedAttrs=[50, 0, 1, 0]}
+ BeltSize = SMALL
+ , Gear{Type = class battle.euipments.Belt, name='power belt', affectedAttrs=[0, 4, 1, 0]}
+ BeltSize = LARGE
+ , Gear{Type = class battle.euipments.Footwear, name='cumbersome footwear', affectedAttrs=[0, 0, -10, 0]}
+ ]
+
+
+
+ Weapons information for two players:
+ Weapon for Player1: [Weapon{name='deft towHandedSword', damage=10}]
+  Weapon for Player2: [Weapon{name='sharp katanas', damage=5}]
+
+
+ The information for two players when they wear gears and use a weapon:
+
+ The information for the first player:
+ Name: Bang Liu, Strength: 60, Constitution: 12, Dexterity: 11, Charisma: 12 Health: 95 StrikingPower: 61 AvoidAbility: 15
+
+
+ The information for the second player:
+ Name: Yu Xiang, Strength: 174, Constitution: 676, Dexterity: 6, Charisma: 1104 Health: 1960 StrikingPower: 177 AvoidAbility: 10
+ The information when they fight:
+
+ Player Yu Xiang attack Player Bang Liu and the damage is:168
+ Player Bang Liu attack Player Yu Xiang and the damage is:0
+ Player Yu Xiang is the winner.
+
+
+
+ Do you want to rematch? If yes press y, preess other keys to quit.
+ y
+ This is the basic information of two players:
+
+ The basic information for player1:
+ Name: Bang Liu, Strength: 3, Constitution: 4, Dexterity: 3, Charisma: 3
+
+
+ The basic information for player2:
+ Name: Yu Xiang, Strength: 6, Constitution: 4, Dexterity: 4, Charisma: 5
+
+
+ Gears information for two players:
+ Gears for Player1:
+  [Gear{Type = class battle.euipments.Headgear, name='ragged header', affectedAttrs=[0, -3, 0, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='alcohol', affectedAttrs=[90, 0, 0, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='medium charming medicine', affectedAttrs=[0, 0, 0, 1]}
+ , Gear{Type = class battle.euipments.Potion, name='painKiller', affectedAttrs=[70, 0, 0, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='small charming medicine', affectedAttrs=[28, 0, 0, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='small dexterity medicine', affectedAttrs=[0, 0, 1, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='strength medicine', affectedAttrs=[3, 0, 0, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='strong medicine', affectedAttrs=[6, 0, 0, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='toxic', affectedAttrs=[0, -1, 0, 0]}
+ , Gear{Type = class battle.euipments.Belt, name='cloth belt', affectedAttrs=[0, -10, -5, 0]}
+ BeltSize = SMALL
+ , Gear{Type = class battle.euipments.Belt, name='cool belt', affectedAttrs=[-7, 0, 0, 10]}
+ BeltSize = MEDIUM
+ , Gear{Type = class battle.euipments.Belt, name='copper belt', affectedAttrs=[0, 3, 0, 0]}
+ BeltSize = SMALL
+ , Gear{Type = class battle.euipments.Belt, name='silver belt', affectedAttrs=[7, 2, 0, 0]}
+ BeltSize = MEDIUM
+ , Gear{Type = class battle.euipments.Belt, name='strong belt', affectedAttrs=[1, 2, 0, 0]}
+ BeltSize = LARGE
+ , Gear{Type = class battle.euipments.Footwear, name='gorgeous footwear', affectedAttrs=[0, 0, 5, 0]}
+ ]
+  Gears for Player2:
+  [Gear{Type = class battle.euipments.Headgear, name='stupid headgear', affectedAttrs=[0, -1, 0, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='APTX 4869', affectedAttrs=[0, 0, 0, 999]}
+ , Gear{Type = class battle.euipments.Potion, name='large blood medicine', affectedAttrs=[0, 1, 0, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='large charming medicine', affectedAttrs=[0, 0, 0, 99]}
+ , Gear{Type = class battle.euipments.Potion, name='large dexterity medicine', affectedAttrs=[0, 0, 6, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='medium dexterity medicine', affectedAttrs=[-30, 0, 3, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='small blood medicine', affectedAttrs=[0, 1, 0, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='trioxide', affectedAttrs=[-2, 0, 0, 0]}
+ , Gear{Type = class battle.euipments.Belt, name='gold belt', affectedAttrs=[0, 2, 3, 0]}
+ BeltSize = MEDIUM
+ , Gear{Type = class battle.euipments.Belt, name='heavy belt', affectedAttrs=[9, 0, 0, 9]}
+ BeltSize = LARGE
+ , Gear{Type = class battle.euipments.Belt, name='tight belt', affectedAttrs=[0, -5, 0, 0]}
+ BeltSize = SMALL
+ , Gear{Type = class battle.euipments.Footwear, name='cumbersome footwear', affectedAttrs=[0, 0, -10, 0]}
+ ]
+
+
+
+ Weapons information for two players:
+ Weapon for Player1: [Weapon{name='toxic axe', damage=8}]
+  Weapon for Player2: [Weapon{name='sharp katanas', damage=5}]
+
+
+ The information for two players when they wear gears and use a weapon:
+
+ The information for the first player:
+ Name: Bang Liu, Strength: 201, Constitution: 0, Dexterity: 4, Charisma: 14 Health: 219 StrikingPower: 207 AvoidAbility: 9
+
+
+ The information for the second player:
+ Name: Yu Xiang, Strength: 0, Constitution: 2, Dexterity: 6, Charisma: 1112 Health: 1120 StrikingPower: 9 AvoidAbility: 12
+ The information when they fight:
+
+ Player Yu Xiang attack Player Bang Liu and the damage is: 0
+ Player Bang Liu attack Player Yu Xiang and the damage is:207
+ Player Yu Xiang attack Player Bang Liu and the damage is:5
+ Player Bang Liu attack Player Yu Xiang and the damage is:209
+ Player Yu Xiang attack Player Bang Liu and the damage is: 0
+ Player Bang Liu attack Player Yu Xiang and the damage is:206
+ Player Yu Xiang attack Player Bang Liu and the damage is: 0
+ Player Bang Liu attack Player Yu Xiang and the damage is:205
+ Player Yu Xiang attack Player Bang Liu and the damage is: 0
+ Player Bang Liu attack Player Yu Xiang and the damage is:205
+ Player Yu Xiang attack Player Bang Liu and the damage is: 0
+ Player Bang Liu attack Player Yu Xiang and the damage is:206
+ Player Bang Liu is the winner.
+
+
+
+ Do you want to rematch? If yes press y, preess other keys to quit.
+ y
+ This is the basic information of two players:
+
+ The basic information for player1:
+ Name: Bang Liu, Strength: 3, Constitution: 4, Dexterity: 3, Charisma: 3
+
+
+ The basic information for player2:
+ Name: Yu Xiang, Strength: 6, Constitution: 4, Dexterity: 4, Charisma: 5
+
+
+ Gears information for two players:
+ Gears for Player1:
+  [Gear{Type = class battle.euipments.Headgear, name='elated header', affectedAttrs=[0, 9, 0, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='alcohol', affectedAttrs=[90, 0, 0, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='large blood medicine', affectedAttrs=[0, 1, 0, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='large charming medicine', affectedAttrs=[0, 0, 0, 99]}
+ , Gear{Type = class battle.euipments.Potion, name='large dexterity medicine', affectedAttrs=[0, 0, 6, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='medium charming medicine', affectedAttrs=[0, 0, 0, 1]}
+ , Gear{Type = class battle.euipments.Potion, name='strength medicine', affectedAttrs=[3, 0, 0, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='toxic', affectedAttrs=[0, -1, 0, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='trioxide', affectedAttrs=[-2, 0, 0, 0]}
+ , Gear{Type = class battle.euipments.Belt, name='cloth belt', affectedAttrs=[0, -10, -5, 0]}
+ BeltSize = SMALL
+ , Gear{Type = class battle.euipments.Belt, name='gold belt', affectedAttrs=[0, 2, 3, 0]}
+ BeltSize = MEDIUM
+ , Gear{Type = class battle.euipments.Belt, name='lovely belt', affectedAttrs=[50, 0, 1, 0]}
+ BeltSize = SMALL
+ , Gear{Type = class battle.euipments.Belt, name='silver belt', affectedAttrs=[7, 2, 0, 0]}
+ BeltSize = MEDIUM
+ , Gear{Type = class battle.euipments.Belt, name='strong belt', affectedAttrs=[1, 2, 0, 0]}
+ BeltSize = LARGE
+ , Gear{Type = class battle.euipments.Footwear, name='gorgeous footwear', affectedAttrs=[0, 0, 5, 0]}
+ ]
+  Gears for Player2:
+  [Gear{Type = class battle.euipments.Headgear, name='fighting headgear', affectedAttrs=[0, 2, 0, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='APTX 4869', affectedAttrs=[0, 0, 0, 999]}
+ , Gear{Type = class battle.euipments.Potion, name='medium dexterity medicine', affectedAttrs=[-30, 0, 3, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='painKiller', affectedAttrs=[70, 0, 0, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='small blood medicine', affectedAttrs=[0, 1, 0, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='small charming medicine', affectedAttrs=[28, 0, 0, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='small dexterity medicine', affectedAttrs=[0, 0, 1, 0]}
+ , Gear{Type = class battle.euipments.Potion, name='strong medicine', affectedAttrs=[6, 0, 0, 0]}
+ , Gear{Type = class battle.euipments.Belt, name='heavy belt', affectedAttrs=[9, 0, 0, 9]}
+ BeltSize = LARGE
+ , Gear{Type = class battle.euipments.Belt, name='power belt', affectedAttrs=[0, 4, 1, 0]}
+ BeltSize = LARGE
+ , Gear{Type = class battle.euipments.Belt, name='tight belt', affectedAttrs=[0, -5, 0, 0]}
+ BeltSize = SMALL
+ , Gear{Type = class battle.euipments.Footwear, name='firm footwear', affectedAttrs=[0, 0, 4, 0]}
+ ]
+
+
+
+ Weapons information for two players:
+ Weapon for Player1: [Weapon{name='heavy broadsword', damage=8}]
+  Weapon for Player2: [Weapon{name='sharp katanas', damage=4}]
+
+
+ The information for two players when they wear gears and use a weapon:
+
+ The information for the first player:
+ Name: Bang Liu, Strength: 152, Constitution: 9, Dexterity: 13, Charisma: 103 Health: 277 StrikingPower: 160 AvoidAbility: 17
+
+
+ The information for the second player:
+ Name: Yu Xiang, Strength: 89, Constitution: 6, Dexterity: 13, Charisma: 1013 Health: 1121 StrikingPower: 92 AvoidAbility: 15
+ The information when they fight:
+
+ Player Yu Xiang attack Player Bang Liu and the damage is:86
+ Player Bang Liu attack Player Yu Xiang and the damage is:156
+ Player Yu Xiang attack Player Bang Liu and the damage is:85
+ Player Bang Liu attack Player Yu Xiang and the damage is:153
+ Player Yu Xiang attack Player Bang Liu and the damage is:86
+ Player Bang Liu attack Player Yu Xiang and the damage is:155
+ Player Yu Xiang attack Player Bang Liu and the damage is:85
+ Player Bang Liu attack Player Yu Xiang and the damage is:153
+ Player Yu Xiang is the winner.
+
+
+
+ Do you want to rematch? If yes press y, preess other keys to quit.
+
+-----------------------------------------------------------------------------------------------------
+2. Second Run:
+/Users/weizhang/Library/Java/JavaVirtualMachines/openjdk-16.0.2/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=51258:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/weizhang/IdeaProjects/Project2/out/production/Project2 battle.Driver
 Once upon a time, there were two outstanding man with superior military ability.One is called Bang Liu, another one is called Yu Xiang. They fight for their faith andthe throne. Let's see who will have a good luck and win the match
-This is the basic information of two players: 
+Players fight with bare hands:
 
-The basic information for player1: 
-Name: Bang Liu, Strength: 3, Constitution: 3, Dexterity: 5, Charisma: 6
+This is the basic information of two players:
 
-
-The basic information for player2: 
-Name: Yu Xiang, Strength: 4, Constitution: 3, Dexterity: 6, Charisma: 5
+The basic information for player1:
+Name: Bang Liu, Strength: 6, Constitution: 5, Dexterity: 6, Charisma: 4
 
 
-Gears information for two players: 
-Gears for Player1: 
- [Gear{Type = class battle.euipments.Headgear, name='stupid headgear', affectedAttrs=[0, -1, 0, 0]}
-, Gear{Type = class battle.euipments.Potion, name='APTX 4869', affectedAttrs=[0, 0, 0, 999]}
-, Gear{Type = class battle.euipments.Potion, name='alcohol', affectedAttrs=[0, 0, -5, 0]}
-, Gear{Type = class battle.euipments.Potion, name='large dexterity medicine', affectedAttrs=[0, 0, 6, 0]}
-, Gear{Type = class battle.euipments.Potion, name='medium charming medicine', affectedAttrs=[0, 0, 0, 1]}
-, Gear{Type = class battle.euipments.Potion, name='medium dexterity medicine', affectedAttrs=[0, 0, 3, 0]}
-, Gear{Type = class battle.euipments.Potion, name='small blood medicine', affectedAttrs=[0, 1, 0, 0]}
-, Gear{Type = class battle.euipments.Belt, name='gold belt', affectedAttrs=[0, 2, 3, 0]}
-BeltSize = MEDIUM
-, Gear{Type = class battle.euipments.Belt, name='leather belt', affectedAttrs=[0, 0, 2, 0]}
-BeltSize = SMALL
-, Gear{Type = class battle.euipments.Belt, name='power belt', affectedAttrs=[0, 4, 1, 0]}
-BeltSize = LARGE
-, Gear{Type = class battle.euipments.Belt, name='silk belt', affectedAttrs=[0, 0, 0, 5]}
-BeltSize = SMALL
-, Gear{Type = class battle.euipments.Footwear, name='beautiful footwear', affectedAttrs=[0, 0, 5, 0]}
-] 
- Gears for Player2: 
- [Gear{Type = class battle.euipments.Headgear, name='fighting headgear', affectedAttrs=[0, 2, 0, 0]}
-, Gear{Type = class battle.euipments.Potion, name='large blood medicine', affectedAttrs=[0, 1, 0, 0]}
+The basic information for player2:
+Name: Yu Xiang, Strength: 4, Constitution: 2, Dexterity: 5, Charisma: 4
+
+
+The information when they fight:
+
+Player Bang Liu attack Player Yu Xiang and the damage is:4
+Player Yu Xiang attack Player Bang Liu and the damage is:0
+Player Bang Liu attack Player Yu Xiang and the damage is:4
+Player Yu Xiang attack Player Bang Liu and the damage is:0
+Player Bang Liu attack Player Yu Xiang and the damage is: 0
+Player Yu Xiang attack Player Bang Liu and the damage is: 0
+Player Bang Liu attack Player Yu Xiang and the damage is:4
+Player Yu Xiang attack Player Bang Liu and the damage is: 0
+Player Bang Liu attack Player Yu Xiang and the damage is:4
+Player Yu Xiang attack Player Bang Liu and the damage is: 0
+Player Bang Liu is the winner.
+
+
+
+
+
+Players fight with gears and weapons
+This is the basic information of two players:
+
+The basic information for player1:
+Name: Bang Liu, Strength: 6, Constitution: 5, Dexterity: 6, Charisma: 4
+
+
+The basic information for player2:
+Name: Yu Xiang, Strength: 4, Constitution: 2, Dexterity: 5, Charisma: 4
+
+
+Gears information for two players:
+Gears for Player1:
+ [Gear{Type = class battle.euipments.Potion, name='APTX 4869', affectedAttrs=[0, 0, 0, 999]}
 , Gear{Type = class battle.euipments.Potion, name='large charming medicine', affectedAttrs=[0, 0, 0, 99]}
-, Gear{Type = class battle.euipments.Potion, name='painKiller', affectedAttrs=[0, 3, 0, 0]}
-, Gear{Type = class battle.euipments.Potion, name='small charming medicine', affectedAttrs=[0, 0, 0, 1]}
+, Gear{Type = class battle.euipments.Potion, name='medium charming medicine', affectedAttrs=[0, 0, 0, 1]}
+, Gear{Type = class battle.euipments.Potion, name='medium dexterity medicine', affectedAttrs=[-30, 0, 3, 0]}
+, Gear{Type = class battle.euipments.Potion, name='painKiller', affectedAttrs=[70, 0, 0, 0]}
+, Gear{Type = class battle.euipments.Potion, name='small blood medicine', affectedAttrs=[0, 1, 0, 0]}
 , Gear{Type = class battle.euipments.Potion, name='small dexterity medicine', affectedAttrs=[0, 0, 1, 0]}
 , Gear{Type = class battle.euipments.Potion, name='strength medicine', affectedAttrs=[3, 0, 0, 0]}
-, Gear{Type = class battle.euipments.Potion, name='strong medicine', affectedAttrs=[6, 0, 0, 0]}
 , Gear{Type = class battle.euipments.Potion, name='toxic', affectedAttrs=[0, -1, 0, 0]}
 , Gear{Type = class battle.euipments.Potion, name='trioxide', affectedAttrs=[-2, 0, 0, 0]}
-, Gear{Type = class battle.euipments.Belt, name='copper belt', affectedAttrs=[0, 3, 0, 0]}
-BeltSize = SMALL
-, Gear{Type = class battle.euipments.Belt, name='garbage belt', affectedAttrs=[7, 1, 0, 0]}
-BeltSize = MEDIUM
-, Gear{Type = class battle.euipments.Belt, name='lovely belt', affectedAttrs=[0, 0, 1, 0]}
-BeltSize = SMALL
-, Gear{Type = class battle.euipments.Belt, name='poor belt', affectedAttrs=[0, -1, 0, -2]}
-BeltSize = LARGE
-, Gear{Type = class battle.euipments.Footwear, name='firm footwear', affectedAttrs=[0, 0, 4, 0]}
-] 
-
-
-
-Weapons information for two players: 
-Weapon for Player1: [Weapon{name='beautiful twoHandedSword', damage=10}]
- Weapon for Player2: [Weapon{name='sharp katanas', damage=6}]
-
-
-The information for two players when they wear gears and use a weapon: 
-
-The information for the first player: 
-Name: Bang Liu, Strength: 3, Constitution: 9, Dexterity: 20, Charisma: 1011 Health: 1043 StrikingPower: 5 AvoidAbility: 23
-
-
-The information for the second player: 
-Name: Yu Xiang, Strength: 18, Constitution: 11, Dexterity: 12, Charisma: 103 Health: 144 StrikingPower: 25 AvoidAbility: 17
-The information when they fight: 
-
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:9
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-The match come to a draw.
-
-
-Do you want to rematch? If yes press y, preess other keys to quit.
-y
-This is the basic information of two players: 
-
-The basic information for player1: 
-Name: Bang Liu, Strength: 3, Constitution: 3, Dexterity: 5, Charisma: 6
-
-
-The basic information for player2: 
-Name: Yu Xiang, Strength: 4, Constitution: 3, Dexterity: 6, Charisma: 5
-
-
-Gears information for two players: 
-Gears for Player1: 
- [Gear{Type = class battle.euipments.Headgear, name='elated header', affectedAttrs=[0, 9, 0, 0]}
-, Gear{Type = class battle.euipments.Potion, name='APTX 4869', affectedAttrs=[0, 0, 0, 999]}
-, Gear{Type = class battle.euipments.Potion, name='alcohol', affectedAttrs=[0, 0, -5, 0]}
-, Gear{Type = class battle.euipments.Potion, name='large blood medicine', affectedAttrs=[0, 1, 0, 0]}
-, Gear{Type = class battle.euipments.Potion, name='medium charming medicine', affectedAttrs=[0, 0, 0, 1]}
-, Gear{Type = class battle.euipments.Potion, name='small blood medicine', affectedAttrs=[0, 1, 0, 0]}
-, Gear{Type = class battle.euipments.Potion, name='trioxide', affectedAttrs=[-2, 0, 0, 0]}
-, Gear{Type = class battle.euipments.Belt, name='heavy belt', affectedAttrs=[9, 0, 0, 9]}
-BeltSize = LARGE
-, Gear{Type = class battle.euipments.Belt, name='leather belt', affectedAttrs=[0, 0, 2, 0]}
-BeltSize = SMALL
-, Gear{Type = class battle.euipments.Belt, name='poor belt', affectedAttrs=[0, -1, 0, -2]}
-BeltSize = LARGE
-, Gear{Type = class battle.euipments.Belt, name='silk belt', affectedAttrs=[0, 0, 0, 5]}
-BeltSize = SMALL
-, Gear{Type = class battle.euipments.Footwear, name='beautiful footwear', affectedAttrs=[0, 0, 5, 0]}
-] 
- Gears for Player2: 
- [Gear{Type = class battle.euipments.Headgear, name='stupid headgear', affectedAttrs=[0, -1, 0, 0]}
-, Gear{Type = class battle.euipments.Potion, name='large charming medicine', affectedAttrs=[0, 0, 0, 99]}
-, Gear{Type = class battle.euipments.Potion, name='large dexterity medicine', affectedAttrs=[0, 0, 6, 0]}
-, Gear{Type = class battle.euipments.Potion, name='medium dexterity medicine', affectedAttrs=[0, 0, 3, 0]}
-, Gear{Type = class battle.euipments.Potion, name='painKiller', affectedAttrs=[0, 3, 0, 0]}
-, Gear{Type = class battle.euipments.Potion, name='small charming medicine', affectedAttrs=[0, 0, 0, 1]}
-, Gear{Type = class battle.euipments.Potion, name='small dexterity medicine', affectedAttrs=[0, 0, 1, 0]}
-, Gear{Type = class battle.euipments.Potion, name='strength medicine', affectedAttrs=[3, 0, 0, 0]}
-, Gear{Type = class battle.euipments.Potion, name='strong medicine', affectedAttrs=[6, 0, 0, 0]}
-, Gear{Type = class battle.euipments.Potion, name='toxic', affectedAttrs=[0, -1, 0, 0]}
 , Gear{Type = class battle.euipments.Belt, name='cool belt', affectedAttrs=[-7, 0, 0, 10]}
 BeltSize = MEDIUM
+, Gear{Type = class battle.euipments.Belt, name='heavy belt', affectedAttrs=[9, 0, 0, 9]}
+BeltSize = LARGE
+, Gear{Type = class battle.euipments.Belt, name='poor belt', affectedAttrs=[19, -1, 0, -2]}
+BeltSize = LARGE
+, Gear{Type = class battle.euipments.Footwear, name='beautiful footwear', affectedAttrs=[0, 0, 5, 0]}
+]
+ Gears for Player2:
+ [Gear{Type = class battle.euipments.Headgear, name='fighting headgear', affectedAttrs=[0, 2, 0, 0]}
+, Gear{Type = class battle.euipments.Potion, name='alcohol', affectedAttrs=[90, 0, 0, 0]}
+, Gear{Type = class battle.euipments.Potion, name='large blood medicine', affectedAttrs=[0, 1, 0, 0]}
+, Gear{Type = class battle.euipments.Potion, name='large dexterity medicine', affectedAttrs=[0, 0, 6, 0]}
+, Gear{Type = class battle.euipments.Potion, name='small charming medicine', affectedAttrs=[28, 0, 0, 0]}
+, Gear{Type = class battle.euipments.Potion, name='strong medicine', affectedAttrs=[6, 0, 0, 0]}
+, Gear{Type = class battle.euipments.Belt, name='cloth belt', affectedAttrs=[0, -10, -5, 0]}
+BeltSize = SMALL
 , Gear{Type = class battle.euipments.Belt, name='garbage belt', affectedAttrs=[7, 1, 0, 0]}
 BeltSize = MEDIUM
 , Gear{Type = class battle.euipments.Belt, name='gold belt', affectedAttrs=[0, 2, 3, 0]}
 BeltSize = MEDIUM
+, Gear{Type = class battle.euipments.Belt, name='leather belt', affectedAttrs=[0, 0, 2, 0]}
+BeltSize = SMALL
 , Gear{Type = class battle.euipments.Belt, name='tight belt', affectedAttrs=[0, -5, 0, 0]}
 BeltSize = SMALL
 , Gear{Type = class battle.euipments.Footwear, name='firm footwear', affectedAttrs=[0, 0, 4, 0]}
-] 
+]
 
 
 
-Weapons information for two players: 
-Weapon for Player1: [Weapon{name='dark axe', damage=10}]
- Weapon for Player2: [Weapon{name='sharp katanas', damage=6}]
+Weapons information for two players:
+Weapon for Player1: [Weapon{name='nimble broadsword', damage=6}]
+ Weapon for Player2: [Weapon{name='sharp katanas', damage=4}]
 
 
-The information for two players when they wear gears and use a weapon: 
+The information for two players when they wear gears and use a weapon:
 
-The information for the first player: 
-Name: Bang Liu, Strength: 10, Constitution: 13, Dexterity: 7, Charisma: 1018 Health: 1048 StrikingPower: 15 AvoidAbility: 12
-
-
-The information for the second player: 
-Name: Yu Xiang, Strength: 13, Constitution: 2, Dexterity: 23, Charisma: 115 Health: 153 StrikingPower: 23 AvoidAbility: 24
-The information when they fight: 
-
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-The match come to a draw.
+The information for the first player:
+Name: Bang Liu, Strength: 68, Constitution: 4, Dexterity: 15, Charisma: 1120 Health: 1207 StrikingPower: 72 AvoidAbility: 20
 
 
-Do you want to rematch? If yes press y, preess other keys to quit.
-y
-This is the basic information of two players: 
+The information for the second player:
+Name: Yu Xiang, Strength: 135, Constitution: 0, Dexterity: 15, Charisma: 4 Health: 154 StrikingPower: 140 AvoidAbility: 20
+The information when they fight:
 
-The basic information for player1: 
-Name: Bang Liu, Strength: 3, Constitution: 3, Dexterity: 5, Charisma: 6
-
-
-The basic information for player2: 
-Name: Yu Xiang, Strength: 4, Constitution: 3, Dexterity: 6, Charisma: 5
-
-
-Gears information for two players: 
-Gears for Player1: 
- [Gear{Type = class battle.euipments.Headgear, name='king headgear', affectedAttrs=[0, 666, 0, 0]}
-, Gear{Type = class battle.euipments.Potion, name='APTX 4869', affectedAttrs=[0, 0, 0, 999]}
-, Gear{Type = class battle.euipments.Potion, name='large dexterity medicine', affectedAttrs=[0, 0, 6, 0]}
-, Gear{Type = class battle.euipments.Potion, name='medium charming medicine', affectedAttrs=[0, 0, 0, 1]}
-, Gear{Type = class battle.euipments.Potion, name='medium dexterity medicine', affectedAttrs=[0, 0, 3, 0]}
-, Gear{Type = class battle.euipments.Potion, name='small charming medicine', affectedAttrs=[0, 0, 0, 1]}
-, Gear{Type = class battle.euipments.Potion, name='small dexterity medicine', affectedAttrs=[0, 0, 1, 0]}
-, Gear{Type = class battle.euipments.Potion, name='toxic', affectedAttrs=[0, -1, 0, 0]}
-, Gear{Type = class battle.euipments.Belt, name='copper belt', affectedAttrs=[0, 3, 0, 0]}
-BeltSize = SMALL
-, Gear{Type = class battle.euipments.Belt, name='garbage belt', affectedAttrs=[7, 1, 0, 0]}
-BeltSize = MEDIUM
-, Gear{Type = class battle.euipments.Belt, name='lovely belt', affectedAttrs=[0, 0, 1, 0]}
-BeltSize = SMALL
-, Gear{Type = class battle.euipments.Belt, name='poor belt', affectedAttrs=[0, -1, 0, -2]}
-BeltSize = LARGE
-, Gear{Type = class battle.euipments.Belt, name='silver belt', affectedAttrs=[7, 2, 0, 0]}
-BeltSize = MEDIUM
-, Gear{Type = class battle.euipments.Footwear, name='gorgeous footwear', affectedAttrs=[0, 0, 5, 0]}
-] 
- Gears for Player2: 
- [Gear{Type = class battle.euipments.Headgear, name='ragged header', affectedAttrs=[0, -3, 0, 0]}
-, Gear{Type = class battle.euipments.Potion, name='alcohol', affectedAttrs=[0, 0, -5, 0]}
-, Gear{Type = class battle.euipments.Potion, name='large blood medicine', affectedAttrs=[0, 1, 0, 0]}
-, Gear{Type = class battle.euipments.Potion, name='large charming medicine', affectedAttrs=[0, 0, 0, 99]}
-, Gear{Type = class battle.euipments.Potion, name='painKiller', affectedAttrs=[0, 3, 0, 0]}
-, Gear{Type = class battle.euipments.Potion, name='small blood medicine', affectedAttrs=[0, 1, 0, 0]}
-, Gear{Type = class battle.euipments.Potion, name='strength medicine', affectedAttrs=[3, 0, 0, 0]}
-, Gear{Type = class battle.euipments.Potion, name='strong medicine', affectedAttrs=[6, 0, 0, 0]}
-, Gear{Type = class battle.euipments.Potion, name='trioxide', affectedAttrs=[-2, 0, 0, 0]}
-, Gear{Type = class battle.euipments.Belt, name='gold belt', affectedAttrs=[0, 2, 3, 0]}
-BeltSize = MEDIUM
-, Gear{Type = class battle.euipments.Belt, name='heavy belt', affectedAttrs=[9, 0, 0, 9]}
-BeltSize = LARGE
-, Gear{Type = class battle.euipments.Belt, name='power belt', affectedAttrs=[0, 4, 1, 0]}
-BeltSize = LARGE
-, Gear{Type = class battle.euipments.Footwear, name='firm footwear', affectedAttrs=[0, 0, 4, 0]}
-] 
-
-
-
-Weapons information for two players: 
-Weapon for Player1: [Weapon{name='beautiful twoHandedSword', damage=12}]
- Weapon for Player2: [Weapon{name='sharp katanas', damage=4}, Weapon{name='sharp katanas', damage=4}]
-
-
-The information for two players when they wear gears and use a weapon: 
-
-The information for the first player: 
-Name: Bang Liu, Strength: 17, Constitution: 673, Dexterity: 21, Charisma: 1005 Health: 1716 StrikingPower: 22 AvoidAbility: 24
-
-
-The information for the second player: 
-Name: Yu Xiang, Strength: 20, Constitution: 11, Dexterity: 9, Charisma: 113 Health: 153 StrikingPower: 22 AvoidAbility: 15
-The information when they fight: 
-
-Player Bang Liu attack Player Yu Xiang and the damage is:12
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is:12
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is:12
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is:12
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is:12
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is:12
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is:12
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is:12
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is:12
-Player Yu Xiang attack Player Bang Liu and the damage is: 0
-Player Bang Liu attack Player Yu Xiang and the damage is:12
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is:12
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is:12
-Player Yu Xiang attack Player Bang Liu and the damage is:0
-Player Bang Liu attack Player Yu Xiang and the damage is:12
-Player Yu Xiang attack Player Bang Liu and the damage is:0
+Player Bang Liu attack Player Yu Xiang and the damage is:75
+Player Yu Xiang attack Player Bang Liu and the damage is:137
+Player Bang Liu attack Player Yu Xiang and the damage is:78
+Player Yu Xiang attack Player Bang Liu and the damage is:137
+Player Bang Liu attack Player Yu Xiang and the damage is:76
+Player Yu Xiang attack Player Bang Liu and the damage is:135
 Player Bang Liu is the winner.
 
 
 
 Do you want to rematch? If yes press y, preess other keys to quit.
-u
+y
+This is the basic information of two players:
 
-Process finished with exit code 0
-
-———————————————————————————————————————————————————————————
-
-Once upon a time, there were two outstanding man with superior military ability.One is called Bang Liu, another one is called Yu Xiang. They fight for their faith andthe throne. Let's see who will have a good luck and win the match
-This is the basic information of two players: 
-
-The basic information for player1: 
-Name: Bang Liu, Strength: 3, Constitution: 4, Dexterity: 3, Charisma: 4
+The basic information for player1:
+Name: Bang Liu, Strength: 6, Constitution: 5, Dexterity: 6, Charisma: 4
 
 
-The basic information for player2: 
-Name: Yu Xiang, Strength: 3, Constitution: 6, Dexterity: 3, Charisma: 4
+The basic information for player2:
+Name: Yu Xiang, Strength: 4, Constitution: 2, Dexterity: 5, Charisma: 4
 
 
-Gears information for two players: 
-Gears for Player1: 
- [Gear{Type = class battle.euipments.Headgear, name='fighting headgear', affectedAttrs=[0, 2, 0, 0]}
-, Gear{Type = class battle.euipments.Potion, name='APTX 4869', affectedAttrs=[0, 0, 0, 999]}
-, Gear{Type = class battle.euipments.Potion, name='alcohol', affectedAttrs=[0, 0, -5, 0]}
-, Gear{Type = class battle.euipments.Potion, name='large blood medicine', affectedAttrs=[0, 1, 0, 0]}
-, Gear{Type = class battle.euipments.Potion, name='small blood medicine', affectedAttrs=[0, 1, 0, 0]}
-, Gear{Type = class battle.euipments.Potion, name='small charming medicine', affectedAttrs=[0, 0, 0, 1]}
-, Gear{Type = class battle.euipments.Potion, name='strong medicine', affectedAttrs=[6, 0, 0, 0]}
-, Gear{Type = class battle.euipments.Potion, name='toxic', affectedAttrs=[0, -1, 0, 0]}
-, Gear{Type = class battle.euipments.Belt, name='cloth belt', affectedAttrs=[0, -10, -5, 0]}
-BeltSize = SMALL
-, Gear{Type = class battle.euipments.Belt, name='cool belt', affectedAttrs=[-7, 0, 0, 10]}
-BeltSize = MEDIUM
-, Gear{Type = class battle.euipments.Belt, name='leather belt', affectedAttrs=[0, 0, 2, 0]}
-BeltSize = SMALL
-, Gear{Type = class battle.euipments.Belt, name='poor belt', affectedAttrs=[0, -1, 0, -2]}
-BeltSize = LARGE
-, Gear{Type = class battle.euipments.Belt, name='silk belt', affectedAttrs=[0, 0, 0, 5]}
-BeltSize = SMALL
-, Gear{Type = class battle.euipments.Belt, name='tight belt', affectedAttrs=[0, -5, 0, 0]}
-BeltSize = SMALL
-, Gear{Type = class battle.euipments.Footwear, name='beautiful footwear', affectedAttrs=[0, 0, 5, 0]}
-] 
- Gears for Player2: 
+Gears information for two players:
+Gears for Player1:
  [Gear{Type = class battle.euipments.Headgear, name='king headgear', affectedAttrs=[0, 666, 0, 0]}
 , Gear{Type = class battle.euipments.Potion, name='large charming medicine', affectedAttrs=[0, 0, 0, 99]}
-, Gear{Type = class battle.euipments.Potion, name='large dexterity medicine', affectedAttrs=[0, 0, 6, 0]}
 , Gear{Type = class battle.euipments.Potion, name='medium charming medicine', affectedAttrs=[0, 0, 0, 1]}
-, Gear{Type = class battle.euipments.Potion, name='medium dexterity medicine', affectedAttrs=[0, 0, 3, 0]}
-, Gear{Type = class battle.euipments.Potion, name='painKiller', affectedAttrs=[0, 3, 0, 0]}
-, Gear{Type = class battle.euipments.Potion, name='small dexterity medicine', affectedAttrs=[0, 0, 1, 0]}
-, Gear{Type = class battle.euipments.Potion, name='strength medicine', affectedAttrs=[3, 0, 0, 0]}
-, Gear{Type = class battle.euipments.Potion, name='trioxide', affectedAttrs=[-2, 0, 0, 0]}
-, Gear{Type = class battle.euipments.Belt, name='gold belt', affectedAttrs=[0, 2, 3, 0]}
-BeltSize = MEDIUM
-, Gear{Type = class battle.euipments.Belt, name='heavy belt', affectedAttrs=[9, 0, 0, 9]}
-BeltSize = LARGE
-, Gear{Type = class battle.euipments.Belt, name='lovely belt', affectedAttrs=[0, 0, 1, 0]}
-BeltSize = SMALL
-, Gear{Type = class battle.euipments.Footwear, name='firm footwear', affectedAttrs=[0, 0, 4, 0]}
-] 
-
-
-
-Weapons information for two players: 
-Weapon for Player1: [Weapon{name='nimble broadsword', damage=6}]
- Weapon for Player2: [Weapon{name='sharp katanas', damage=5}]
-
-
-The information for two players when they wear gears and use a weapon: 
-
-The information for the first player: 
-Name: Bang Liu, Strength: 2, Constitution: 0, Dexterity: 0, Charisma: 1017 Health: 1019 StrikingPower: 11 AvoidAbility: 2
-
-
-The information for the second player: 
-Name: Yu Xiang, Strength: 13, Constitution: 677, Dexterity: 21, Charisma: 113 Health: 824 StrikingPower: 18 AvoidAbility: 22
-The information when they fight: 
-
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:13
-Player Yu Xiang is the winner.
-
-
-
-Do you want to rematch? If yes press y, preess other keys to quit.
-y
-This is the basic information of two players: 
-
-The basic information for player1: 
-Name: Bang Liu, Strength: 3, Constitution: 4, Dexterity: 3, Charisma: 4
-
-
-The basic information for player2: 
-Name: Yu Xiang, Strength: 3, Constitution: 6, Dexterity: 3, Charisma: 4
-
-
-Gears information for two players: 
-Gears for Player1: 
- [Gear{Type = class battle.euipments.Headgear, name='fighting headgear', affectedAttrs=[0, 2, 0, 0]}
-, Gear{Type = class battle.euipments.Potion, name='alcohol', affectedAttrs=[0, 0, -5, 0]}
-, Gear{Type = class battle.euipments.Potion, name='medium dexterity medicine', affectedAttrs=[0, 0, 3, 0]}
-, Gear{Type = class battle.euipments.Potion, name='small charming medicine', affectedAttrs=[0, 0, 0, 1]}
-, Gear{Type = class battle.euipments.Potion, name='small dexterity medicine', affectedAttrs=[0, 0, 1, 0]}
-, Gear{Type = class battle.euipments.Potion, name='strong medicine', affectedAttrs=[6, 0, 0, 0]}
+, Gear{Type = class battle.euipments.Potion, name='painKiller', affectedAttrs=[70, 0, 0, 0]}
+, Gear{Type = class battle.euipments.Potion, name='small blood medicine', affectedAttrs=[0, 1, 0, 0]}
 , Gear{Type = class battle.euipments.Potion, name='toxic', affectedAttrs=[0, -1, 0, 0]}
 , Gear{Type = class battle.euipments.Belt, name='cool belt', affectedAttrs=[-7, 0, 0, 10]}
 BeltSize = MEDIUM
-, Gear{Type = class battle.euipments.Belt, name='garbage belt', affectedAttrs=[7, 1, 0, 0]}
+, Gear{Type = class battle.euipments.Belt, name='gold belt', affectedAttrs=[0, 2, 3, 0]}
 BeltSize = MEDIUM
-, Gear{Type = class battle.euipments.Belt, name='iron belt', affectedAttrs=[100, 0, 0, 0]}
-BeltSize = LARGE
+, Gear{Type = class battle.euipments.Belt, name='leather belt', affectedAttrs=[0, 0, 2, 0]}
+BeltSize = SMALL
 , Gear{Type = class battle.euipments.Belt, name='silk belt', affectedAttrs=[0, 0, 0, 5]}
 BeltSize = SMALL
-, Gear{Type = class battle.euipments.Belt, name='tight belt', affectedAttrs=[0, -5, 0, 0]}
-BeltSize = SMALL
-, Gear{Type = class battle.euipments.Footwear, name='beautiful footwear', affectedAttrs=[0, 0, 5, 0]}
-] 
- Gears for Player2: 
- [Gear{Type = class battle.euipments.Headgear, name='stupid headgear', affectedAttrs=[0, -1, 0, 0]}
+, Gear{Type = class battle.euipments.Belt, name='silver belt', affectedAttrs=[7, 2, 0, 0]}
+BeltSize = MEDIUM
+, Gear{Type = class battle.euipments.Footwear, name='gorgeous footwear', affectedAttrs=[0, 0, 5, 0]}
+]
+ Gears for Player2:
+ [Gear{Type = class battle.euipments.Headgear, name='fighting headgear', affectedAttrs=[0, 2, 0, 0]}
 , Gear{Type = class battle.euipments.Potion, name='APTX 4869', affectedAttrs=[0, 0, 0, 999]}
+, Gear{Type = class battle.euipments.Potion, name='alcohol', affectedAttrs=[90, 0, 0, 0]}
 , Gear{Type = class battle.euipments.Potion, name='large blood medicine', affectedAttrs=[0, 1, 0, 0]}
-, Gear{Type = class battle.euipments.Potion, name='large charming medicine', affectedAttrs=[0, 0, 0, 99]}
 , Gear{Type = class battle.euipments.Potion, name='large dexterity medicine', affectedAttrs=[0, 0, 6, 0]}
-, Gear{Type = class battle.euipments.Potion, name='medium charming medicine', affectedAttrs=[0, 0, 0, 1]}
-, Gear{Type = class battle.euipments.Potion, name='painKiller', affectedAttrs=[0, 3, 0, 0]}
-, Gear{Type = class battle.euipments.Potion, name='small blood medicine', affectedAttrs=[0, 1, 0, 0]}
+, Gear{Type = class battle.euipments.Potion, name='medium dexterity medicine', affectedAttrs=[-30, 0, 3, 0]}
+, Gear{Type = class battle.euipments.Potion, name='small charming medicine', affectedAttrs=[28, 0, 0, 0]}
+, Gear{Type = class battle.euipments.Potion, name='small dexterity medicine', affectedAttrs=[0, 0, 1, 0]}
 , Gear{Type = class battle.euipments.Potion, name='strength medicine', affectedAttrs=[3, 0, 0, 0]}
+, Gear{Type = class battle.euipments.Potion, name='strong medicine', affectedAttrs=[6, 0, 0, 0]}
 , Gear{Type = class battle.euipments.Potion, name='trioxide', affectedAttrs=[-2, 0, 0, 0]}
-, Gear{Type = class battle.euipments.Belt, name='heavy belt', affectedAttrs=[9, 0, 0, 9]}
-BeltSize = LARGE
+, Gear{Type = class battle.euipments.Belt, name='copper belt', affectedAttrs=[0, 3, 0, 0]}
+BeltSize = SMALL
+, Gear{Type = class battle.euipments.Belt, name='garbage belt', affectedAttrs=[7, 1, 0, 0]}
+BeltSize = MEDIUM
+, Gear{Type = class battle.euipments.Belt, name='lovely belt', affectedAttrs=[50, 0, 1, 0]}
+BeltSize = SMALL
 , Gear{Type = class battle.euipments.Belt, name='power belt', affectedAttrs=[0, 4, 1, 0]}
 BeltSize = LARGE
-, Gear{Type = class battle.euipments.Footwear, name='firm footwear', affectedAttrs=[0, 0, 4, 0]}
-] 
+, Gear{Type = class battle.euipments.Footwear, name='cumbersome footwear', affectedAttrs=[0, 0, -10, 0]}
+]
 
 
 
-Weapons information for two players: 
-Weapon for Player1: [Weapon{name='long katanas', damage=5}, Weapon{name='long katanas', damage=5}]
- Weapon for Player2: [Weapon{name='sharp katanas', damage=5}, Weapon{name='painful flail', damage=11}]
+Weapons information for two players:
+Weapon for Player1: [Weapon{name='sharp katanas', damage=4}]
+ Weapon for Player2: [Weapon{name='long katanas', damage=5}]
 
 
-The information for two players when they wear gears and use a weapon: 
+The information for two players when they wear gears and use a weapon:
 
-The information for the first player: 
-Name: Bang Liu, Strength: 109, Constitution: 1, Dexterity: 7, Charisma: 20 Health: 137 StrikingPower: 118 AvoidAbility: 8
+The information for the first player:
+Name: Bang Liu, Strength: 76, Constitution: 675, Dexterity: 16, Charisma: 119 Health: 886 StrikingPower: 77 AvoidAbility: 22
 
 
-The information for the second player: 
-Name: Yu Xiang, Strength: 13, Constitution: 14, Dexterity: 14, Charisma: 1112 Health: 1153 StrikingPower: 15 AvoidAbility: 15
-The information when they fight: 
+The information for the second player:
+Name: Yu Xiang, Strength: 156, Constitution: 13, Dexterity: 7, Charisma: 1003 Health: 1179 StrikingPower: 159 AvoidAbility: 11
+The information when they fight:
 
-Player Yu Xiang attack Player Bang Liu and the damage is:17
-Player Bang Liu attack Player Yu Xiang and the damage is:95
-Player Yu Xiang attack Player Bang Liu and the damage is:17
-Player Bang Liu attack Player Yu Xiang and the damage is:95
-Player Yu Xiang attack Player Bang Liu and the damage is:17
-Player Bang Liu attack Player Yu Xiang and the damage is:95
-Player Yu Xiang attack Player Bang Liu and the damage is:17
-Player Bang Liu attack Player Yu Xiang and the damage is:95
-Player Yu Xiang attack Player Bang Liu and the damage is:17
-Player Bang Liu attack Player Yu Xiang and the damage is:95
-Player Yu Xiang attack Player Bang Liu and the damage is:17
-Player Bang Liu attack Player Yu Xiang and the damage is:95
-Player Yu Xiang attack Player Bang Liu and the damage is:17
-Player Bang Liu attack Player Yu Xiang and the damage is:95
-Player Yu Xiang attack Player Bang Liu and the damage is:17
-Player Bang Liu attack Player Yu Xiang and the damage is:95
-Player Yu Xiang attack Player Bang Liu and the damage is:17
-Player Bang Liu attack Player Yu Xiang and the damage is:95
-Player Yu Xiang is the winner.
+Player Yu Xiang attack Player Bang Liu and the damage is:0
+Player Bang Liu attack Player Yu Xiang and the damage is:67
+Player Yu Xiang attack Player Bang Liu and the damage is:0
+Player Bang Liu attack Player Yu Xiang and the damage is:67
+Player Yu Xiang attack Player Bang Liu and the damage is:0
+Player Bang Liu attack Player Yu Xiang and the damage is:68
+Player Yu Xiang attack Player Bang Liu and the damage is:0
+Player Bang Liu attack Player Yu Xiang and the damage is:67
+Player Yu Xiang attack Player Bang Liu and the damage is:0
+Player Bang Liu attack Player Yu Xiang and the damage is:68
+Player Yu Xiang attack Player Bang Liu and the damage is:0
+Player Bang Liu attack Player Yu Xiang and the damage is:67
+Player Yu Xiang attack Player Bang Liu and the damage is:0
+Player Bang Liu attack Player Yu Xiang and the damage is:68
+Player Yu Xiang attack Player Bang Liu and the damage is:0
+Player Bang Liu attack Player Yu Xiang and the damage is:69
+Player Yu Xiang attack Player Bang Liu and the damage is:0
+Player Bang Liu attack Player Yu Xiang and the damage is:69
+Player Yu Xiang attack Player Bang Liu and the damage is:0
+Player Bang Liu attack Player Yu Xiang and the damage is:69
+Player Yu Xiang attack Player Bang Liu and the damage is:0
+Player Bang Liu attack Player Yu Xiang and the damage is:67
+Player Yu Xiang attack Player Bang Liu and the damage is:0
+Player Bang Liu attack Player Yu Xiang and the damage is:68
+Player Yu Xiang attack Player Bang Liu and the damage is:0
+Player Bang Liu attack Player Yu Xiang and the damage is:67
+Player Yu Xiang attack Player Bang Liu and the damage is:0
+Player Bang Liu attack Player Yu Xiang and the damage is:68
+Player Yu Xiang attack Player Bang Liu and the damage is:0
+Player Bang Liu attack Player Yu Xiang and the damage is:68
+Player Yu Xiang attack Player Bang Liu and the damage is:0
+Player Bang Liu attack Player Yu Xiang and the damage is:68
+Player Yu Xiang attack Player Bang Liu and the damage is:0
+Player Bang Liu attack Player Yu Xiang and the damage is:67
+Player Yu Xiang attack Player Bang Liu and the damage is:0
+Player Bang Liu attack Player Yu Xiang and the damage is:67
+Player Bang Liu is the winner.
 
 
 
 Do you want to rematch? If yes press y, preess other keys to quit.
 y
-This is the basic information of two players: 
+This is the basic information of two players:
 
-The basic information for player1: 
-Name: Bang Liu, Strength: 3, Constitution: 4, Dexterity: 3, Charisma: 4
-
-
-The basic information for player2: 
-Name: Yu Xiang, Strength: 3, Constitution: 6, Dexterity: 3, Charisma: 4
+The basic information for player1:
+Name: Bang Liu, Strength: 6, Constitution: 5, Dexterity: 6, Charisma: 4
 
 
-Gears information for two players: 
-Gears for Player1: 
- [Gear{Type = class battle.euipments.Headgear, name='elated header', affectedAttrs=[0, 9, 0, 0]}
-, Gear{Type = class battle.euipments.Potion, name='alcohol', affectedAttrs=[0, 0, -5, 0]}
+The basic information for player2:
+Name: Yu Xiang, Strength: 4, Constitution: 2, Dexterity: 5, Charisma: 4
+
+
+Gears information for two players:
+Gears for Player1:
+ [Gear{Type = class battle.euipments.Headgear, name='ragged header', affectedAttrs=[0, -3, 0, 0]}
+, Gear{Type = class battle.euipments.Potion, name='alcohol', affectedAttrs=[90, 0, 0, 0]}
 , Gear{Type = class battle.euipments.Potion, name='large blood medicine', affectedAttrs=[0, 1, 0, 0]}
 , Gear{Type = class battle.euipments.Potion, name='large dexterity medicine', affectedAttrs=[0, 0, 6, 0]}
-, Gear{Type = class battle.euipments.Potion, name='medium dexterity medicine', affectedAttrs=[0, 0, 3, 0]}
-, Gear{Type = class battle.euipments.Potion, name='painKiller', affectedAttrs=[0, 3, 0, 0]}
+, Gear{Type = class battle.euipments.Potion, name='medium charming medicine', affectedAttrs=[0, 0, 0, 1]}
+, Gear{Type = class battle.euipments.Potion, name='painKiller', affectedAttrs=[70, 0, 0, 0]}
 , Gear{Type = class battle.euipments.Potion, name='small blood medicine', affectedAttrs=[0, 1, 0, 0]}
-, Gear{Type = class battle.euipments.Potion, name='small charming medicine', affectedAttrs=[0, 0, 0, 1]}
-, Gear{Type = class battle.euipments.Potion, name='small dexterity medicine', affectedAttrs=[0, 0, 1, 0]}
+, Gear{Type = class battle.euipments.Potion, name='small charming medicine', affectedAttrs=[28, 0, 0, 0]}
 , Gear{Type = class battle.euipments.Potion, name='strength medicine', affectedAttrs=[3, 0, 0, 0]}
 , Gear{Type = class battle.euipments.Potion, name='toxic', affectedAttrs=[0, -1, 0, 0]}
-, Gear{Type = class battle.euipments.Belt, name='copper belt', affectedAttrs=[0, 3, 0, 0]}
-BeltSize = SMALL
+, Gear{Type = class battle.euipments.Potion, name='trioxide', affectedAttrs=[-2, 0, 0, 0]}
+, Gear{Type = class battle.euipments.Belt, name='garbage belt', affectedAttrs=[7, 1, 0, 0]}
+BeltSize = MEDIUM
 , Gear{Type = class battle.euipments.Belt, name='leather belt', affectedAttrs=[0, 0, 2, 0]}
 BeltSize = SMALL
-, Gear{Type = class battle.euipments.Belt, name='power belt', affectedAttrs=[0, 4, 1, 0]}
-BeltSize = LARGE
-, Gear{Type = class battle.euipments.Belt, name='tight belt', affectedAttrs=[0, -5, 0, 0]}
+, Gear{Type = class battle.euipments.Belt, name='lovely belt', affectedAttrs=[50, 0, 1, 0]}
 BeltSize = SMALL
-, Gear{Type = class battle.euipments.Footwear, name='beautiful footwear', affectedAttrs=[0, 0, 5, 0]}
-] 
- Gears for Player2: 
+, Gear{Type = class battle.euipments.Belt, name='silver belt', affectedAttrs=[7, 2, 0, 0]}
+BeltSize = MEDIUM
+, Gear{Type = class battle.euipments.Belt, name='strong belt', affectedAttrs=[1, 2, 0, 0]}
+BeltSize = LARGE
+, Gear{Type = class battle.euipments.Footwear, name='gorgeous footwear', affectedAttrs=[0, 0, 5, 0]}
+]
+ Gears for Player2:
  [Gear{Type = class battle.euipments.Headgear, name='fighting headgear', affectedAttrs=[0, 2, 0, 0]}
 , Gear{Type = class battle.euipments.Potion, name='APTX 4869', affectedAttrs=[0, 0, 0, 999]}
 , Gear{Type = class battle.euipments.Potion, name='large charming medicine', affectedAttrs=[0, 0, 0, 99]}
-, Gear{Type = class battle.euipments.Potion, name='medium charming medicine', affectedAttrs=[0, 0, 0, 1]}
+, Gear{Type = class battle.euipments.Potion, name='medium dexterity medicine', affectedAttrs=[-30, 0, 3, 0]}
+, Gear{Type = class battle.euipments.Potion, name='small dexterity medicine', affectedAttrs=[0, 0, 1, 0]}
 , Gear{Type = class battle.euipments.Potion, name='strong medicine', affectedAttrs=[6, 0, 0, 0]}
-, Gear{Type = class battle.euipments.Potion, name='trioxide', affectedAttrs=[-2, 0, 0, 0]}
-, Gear{Type = class battle.euipments.Belt, name='cloth belt', affectedAttrs=[0, -10, -5, 0]}
-BeltSize = SMALL
-, Gear{Type = class battle.euipments.Belt, name='garbage belt', affectedAttrs=[7, 1, 0, 0]}
-BeltSize = MEDIUM
 , Gear{Type = class battle.euipments.Belt, name='gold belt', affectedAttrs=[0, 2, 3, 0]}
 BeltSize = MEDIUM
 , Gear{Type = class battle.euipments.Belt, name='heavy belt', affectedAttrs=[9, 0, 0, 9]}
 BeltSize = LARGE
-, Gear{Type = class battle.euipments.Belt, name='silk belt', affectedAttrs=[0, 0, 0, 5]}
+, Gear{Type = class battle.euipments.Belt, name='tight belt', affectedAttrs=[0, -5, 0, 0]}
 BeltSize = SMALL
 , Gear{Type = class battle.euipments.Footwear, name='firm footwear', affectedAttrs=[0, 0, 4, 0]}
-] 
+]
 
 
 
-Weapons information for two players: 
-Weapon for Player1: [Weapon{name='long katanas', damage=5}, Weapon{name='sharp katanas', damage=4}]
- Weapon for Player2: []
+Weapons information for two players:
+Weapon for Player1: [Weapon{name='deft towHandedSword', damage=12}]
+ Weapon for Player2: [Weapon{name='sharp katanas', damage=6}]
 
 
-The information for two players when they wear gears and use a weapon: 
+The information for two players when they wear gears and use a weapon:
 
-The information for the first player: 
-Name: Bang Liu, Strength: 6, Constitution: 19, Dexterity: 16, Charisma: 5 Health: 46 StrikingPower: 14 AvoidAbility: 22
+The information for the first player:
+Name: Bang Liu, Strength: 260, Constitution: 8, Dexterity: 20, Charisma: 5 Health: 293 StrikingPower: 265 AvoidAbility: 22
 
 
-The information for the second player: 
-Name: Yu Xiang, Strength: 23, Constitution: 1, Dexterity: 5, Charisma: 1117 Health: 1146 StrikingPower: 28 AvoidAbility: 7
-The information when they fight: 
+The information for the second player:
+Name: Yu Xiang, Strength: 0, Constitution: 1, Dexterity: 16, Charisma: 1111 Health: 1128 StrikingPower: 2 AvoidAbility: 19
+The information when they fight:
 
-Player Yu Xiang attack Player Bang Liu and the damage is:4
-Player Bang Liu attack Player Yu Xiang and the damage is:5
-Player Yu Xiang attack Player Bang Liu and the damage is:4
-Player Bang Liu attack Player Yu Xiang and the damage is:5
-Player Yu Xiang attack Player Bang Liu and the damage is:4
-Player Bang Liu attack Player Yu Xiang and the damage is:5
-Player Yu Xiang attack Player Bang Liu and the damage is:4
-Player Bang Liu attack Player Yu Xiang and the damage is:5
-Player Yu Xiang attack Player Bang Liu and the damage is:4
-Player Bang Liu attack Player Yu Xiang and the damage is:5
-Player Yu Xiang attack Player Bang Liu and the damage is:4
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:4
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:4
-Player Bang Liu attack Player Yu Xiang and the damage is:5
-Player Yu Xiang attack Player Bang Liu and the damage is:4
-Player Bang Liu attack Player Yu Xiang and the damage is:5
-Player Yu Xiang attack Player Bang Liu and the damage is:4
-Player Bang Liu attack Player Yu Xiang and the damage is: 0
-Player Yu Xiang attack Player Bang Liu and the damage is:4
-Player Bang Liu attack Player Yu Xiang and the damage is:5
-Player Yu Xiang attack Player Bang Liu and the damage is:4
-Player Bang Liu attack Player Yu Xiang and the damage is:5
-Player Yu Xiang is the winner.
+Player Yu Xiang attack Player Bang Liu and the damage is: 0
+Player Bang Liu attack Player Yu Xiang and the damage is:263
+Player Yu Xiang attack Player Bang Liu and the damage is: 0
+Player Bang Liu attack Player Yu Xiang and the damage is:264
+Player Yu Xiang attack Player Bang Liu and the damage is: 0
+Player Bang Liu attack Player Yu Xiang and the damage is:263
+Player Yu Xiang attack Player Bang Liu and the damage is: 0
+Player Bang Liu attack Player Yu Xiang and the damage is:264
+Player Yu Xiang attack Player Bang Liu and the damage is: 0
+Player Bang Liu attack Player Yu Xiang and the damage is:264
+Player Bang Liu is the winner.
 
 
 
 Do you want to rematch? If yes press y, preess other keys to quit.
-q
+y
+This is the basic information of two players:
 
-Process finished with exit code 0
+The basic information for player1:
+Name: Bang Liu, Strength: 6, Constitution: 5, Dexterity: 6, Charisma: 4
 
+
+The basic information for player2:
+Name: Yu Xiang, Strength: 4, Constitution: 2, Dexterity: 5, Charisma: 4
+
+
+Gears information for two players:
+Gears for Player1:
+ [Gear{Type = class battle.euipments.Headgear, name='fighting headgear', affectedAttrs=[0, 2, 0, 0]}
+, Gear{Type = class battle.euipments.Potion, name='alcohol', affectedAttrs=[90, 0, 0, 0]}
+, Gear{Type = class battle.euipments.Potion, name='large blood medicine', affectedAttrs=[0, 1, 0, 0]}
+, Gear{Type = class battle.euipments.Potion, name='large dexterity medicine', affectedAttrs=[0, 0, 6, 0]}
+, Gear{Type = class battle.euipments.Potion, name='painKiller', affectedAttrs=[70, 0, 0, 0]}
+, Gear{Type = class battle.euipments.Potion, name='small dexterity medicine', affectedAttrs=[0, 0, 1, 0]}
+, Gear{Type = class battle.euipments.Potion, name='strength medicine', affectedAttrs=[3, 0, 0, 0]}
+, Gear{Type = class battle.euipments.Potion, name='toxic', affectedAttrs=[0, -1, 0, 0]}
+, Gear{Type = class battle.euipments.Belt, name='gold belt', affectedAttrs=[0, 2, 3, 0]}
+BeltSize = MEDIUM
+, Gear{Type = class battle.euipments.Belt, name='heavy belt', affectedAttrs=[9, 0, 0, 9]}
+BeltSize = LARGE
+, Gear{Type = class battle.euipments.Belt, name='leather belt', affectedAttrs=[0, 0, 2, 0]}
+BeltSize = SMALL
+, Gear{Type = class battle.euipments.Belt, name='lovely belt', affectedAttrs=[50, 0, 1, 0]}
+BeltSize = SMALL
+, Gear{Type = class battle.euipments.Belt, name='tight belt', affectedAttrs=[0, -5, 0, 0]}
+BeltSize = SMALL
+, Gear{Type = class battle.euipments.Footwear, name='poor footwear', affectedAttrs=[0, 0, -9, 0]}
+]
+ Gears for Player2:
+ [Gear{Type = class battle.euipments.Headgear, name='stupid headgear', affectedAttrs=[0, -1, 0, 0]}
+, Gear{Type = class battle.euipments.Potion, name='APTX 4869', affectedAttrs=[0, 0, 0, 999]}
+, Gear{Type = class battle.euipments.Potion, name='large charming medicine', affectedAttrs=[0, 0, 0, 99]}
+, Gear{Type = class battle.euipments.Potion, name='medium charming medicine', affectedAttrs=[0, 0, 0, 1]}
+, Gear{Type = class battle.euipments.Potion, name='medium dexterity medicine', affectedAttrs=[-30, 0, 3, 0]}
+, Gear{Type = class battle.euipments.Potion, name='small blood medicine', affectedAttrs=[0, 1, 0, 0]}
+, Gear{Type = class battle.euipments.Potion, name='small charming medicine', affectedAttrs=[28, 0, 0, 0]}
+, Gear{Type = class battle.euipments.Potion, name='strong medicine', affectedAttrs=[6, 0, 0, 0]}
+, Gear{Type = class battle.euipments.Potion, name='trioxide', affectedAttrs=[-2, 0, 0, 0]}
+, Gear{Type = class battle.euipments.Belt, name='garbage belt', affectedAttrs=[7, 1, 0, 0]}
+BeltSize = MEDIUM
+, Gear{Type = class battle.euipments.Belt, name='poor belt', affectedAttrs=[19, -1, 0, -2]}
+BeltSize = LARGE
+, Gear{Type = class battle.euipments.Belt, name='power belt', affectedAttrs=[0, 4, 1, 0]}
+BeltSize = LARGE
+, Gear{Type = class battle.euipments.Footwear, name='firm footwear', affectedAttrs=[0, 0, 4, 0]}
+]
+
+
+
+Weapons information for two players:
+Weapon for Player1: [Weapon{name='beautiful twoHandedSword', damage=12}]
+ Weapon for Player2: [Weapon{name='sharp katanas', damage=6}]
+
+
+The information for two players when they wear gears and use a weapon:
+
+The information for the first player:
+Name: Bang Liu, Strength: 228, Constitution: 4, Dexterity: 10, Charisma: 13 Health: 255 StrikingPower: 236 AvoidAbility: 14
+
+
+The information for the second player:
+Name: Yu Xiang, Strength: 32, Constitution: 6, Dexterity: 13, Charisma: 1101 Health: 1152 StrikingPower: 39 AvoidAbility: 15
+The information when they fight:
+
+Player Yu Xiang attack Player Bang Liu and the damage is:33
+Player Bang Liu attack Player Yu Xiang and the damage is:228
+Player Yu Xiang attack Player Bang Liu and the damage is:32
+Player Bang Liu attack Player Yu Xiang and the damage is:227
+Player Yu Xiang attack Player Bang Liu and the damage is:33
+Player Bang Liu attack Player Yu Xiang and the damage is:227
+Player Yu Xiang attack Player Bang Liu and the damage is:34
+Player Bang Liu attack Player Yu Xiang and the damage is:226
+Player Yu Xiang attack Player Bang Liu and the damage is:34
+Player Bang Liu attack Player Yu Xiang and the damage is:226
+Player Yu Xiang attack Player Bang Liu and the damage is:33
+Player Bang Liu attack Player Yu Xiang and the damage is:226
+Player Bang Liu is the winner.
+
+
+
+Do you want to rematch? If yes press y, preess other keys to quit.

@@ -10,13 +10,15 @@ import java.util.ArrayList;
  * their gears randomly.
  */
 public class Bag {
-  private ArrayList<Gear> gears = new ArrayList<>();
+  private ArrayList<Gear> gears;
 
   /**
    * This is constructor for Bag class. When constructed,
    * the instance would contain 40 gears.
    */
   public Bag() {
+    this.gears = new ArrayList<>();
+
     Headgear headgear1 = new Headgear("fighting headgear", new int[]{0, 2, 0, 0});
     Headgear headgear2 = new Headgear("stupid headgear", new int[]{0, -1, 0, 0});
     Headgear headgear3 = new Headgear("king headgear", new int[]{0, 666, 0, 0});
@@ -112,7 +114,11 @@ public class Bag {
    * @param type Represents generating random values for game logic or for tests.
    * @return An ArrayList of 20 randomly choosed gears.
    */
-  public ArrayList<Gear> getGears(String type) {
+  public ArrayList<Gear> getGears(String type) throws IllegalArgumentException{
+    if (type == null || type.isEmpty()) {
+      throw new IllegalArgumentException("RandomValue instance must hava a type.");
+    }
+
     ArrayList<Gear> onePlayerGears = new ArrayList<>();
     RandomFactory randomFactory = new RandomFactory();
     RandomValue randomValuesIns = randomFactory.createRandomInstance(type, 0, 39);
@@ -124,7 +130,7 @@ public class Bag {
       onePlayerGears.add(this.gears.get(randomValue));
     }
 
-    return onePlayerGears;
+    return (ArrayList<Gear>) onePlayerGears.clone();
   }
 
   /**
@@ -134,7 +140,10 @@ public class Bag {
    * @param usedGears An ArrayList of used gears.
    * @return An ArrayList of 20 remained gears.
    */
-  public ArrayList<Gear> getRemainGears(ArrayList<Gear> usedGears) {
+  public ArrayList<Gear> getRemainGears(ArrayList<Gear> usedGears) throws IllegalArgumentException{
+    if (usedGears == null) {
+      throw new IllegalArgumentException("usedGears can not be null.");
+    }
     ArrayList<Gear> remainGears = new ArrayList<>();
 
     for (Gear gear : this.gears) {
@@ -143,6 +152,6 @@ public class Bag {
       }
     }
 
-    return remainGears;
+    return (ArrayList<Gear>) remainGears.clone();
   }
 }

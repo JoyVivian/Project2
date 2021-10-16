@@ -11,6 +11,7 @@ import battle.weapons.TwoHandedSwords;
 import battle.weapons.Weapon;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 /**
  * A class that is used to test Weapon Class.
@@ -42,11 +43,11 @@ public class WeaponTest {
 
   @Test
   public void getDamage() {
-    assertEquals(10, axe.getDamage());
-    assertEquals(10, broadSwords.getDamage());
-    assertEquals(12, flail.getDamage());
-    assertEquals(6, katanas.getDamage());
-    assertEquals(12, twoHandedSwords.getDamage());
+    assertEquals(10, axe.getDamage("FalseRandom"));
+    assertEquals(10, broadSwords.getDamage("FalseRandom"));
+    assertEquals(12, flail.getDamage("FalseRandom"));
+    assertEquals(6, katanas.getDamage("FalseRandom"));
+    assertEquals(12, twoHandedSwords.getDamage("FalseRandom"));
   }
 
   @Test
@@ -77,5 +78,41 @@ public class WeaponTest {
     assertEquals("Weapon{name='super twohandswords', damage=12}", twoHandedSwords.toString());
   }
 
+  @Test
+  public void testIAE() {
+    try {
+      new Axe(null, null);
+      fail("The instance above should throw an IAE");
+    }catch (Exception e) {
+      //test successful.
+    }
 
+    try {
+      new Boradswords(null, null);
+      fail("The instance above should throw an IAE");
+    }catch (Exception e) {
+      //test successful.
+    }
+
+    try {
+      new Flail(null, null);
+      fail("The instance above should throw an IAE");
+    }catch (Exception e) {
+      //test successful.
+    }
+
+    try {
+      new Katanas(null, null);
+      fail("The instance above should throw an IAE");
+    }catch (Exception e) {
+      //test successful.
+    }
+
+    try {
+      new TwoHandedSwords(null, null);
+      fail("The instance above should throw an IAE");
+    }catch (Exception e) {
+      //test successful.
+    }
+  }
 }
