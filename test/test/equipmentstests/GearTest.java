@@ -1,4 +1,4 @@
-package test.equipmentsTests;
+package test.equipmentstests;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -14,6 +14,9 @@ import battle.euipments.Potion;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * A class that is used to test the Gear class.
+ */
 public class GearTest {
   private Gear belt;
   private Gear belt2;
@@ -111,7 +114,8 @@ public class GearTest {
 
   @Test
   public void testToString() {
-    assertEquals("Gear{Type = class battle.euipments.Belt, name='god belt', affectedAttrs=[1, 0, 1, 0]}\n" +
+    assertEquals("Gear{Type = class battle.euipments.Belt, name='god belt'," +
+            " affectedAttrs=[1, 0, 1, 0]}\n" +
             "BeltSize = LARGE\n", belt.toString());
     assertEquals("Gear{Type = class battle.euipments.Footwear, name='fast footwear', " +
                     "affectedAttrs=[0, 0, 21, 0]}\n", footwear.toString());
@@ -131,10 +135,14 @@ public class GearTest {
 
   @Test
   public void testHashCode() {
-    assertEquals(new Belt("god belt", new int[]{1, 0, 1, 0}, BeltSize.LARGE).hashCode(), belt.hashCode());
-    assertEquals(new Footwear("fast footwear", new int[]{0, 0, 21, 0}).hashCode(), footwear.hashCode());
-    assertEquals(new Headgear("stupid headwear", new int[]{0, -50, 0, 0}).hashCode(), headgear.hashCode());
-    assertEquals(new Potion("APTX 4869", new int[]{0, 0, 0, 999}).hashCode(), potion.hashCode());
+    assertEquals(new Belt("god belt", new int[]{1, 0, 1, 0},
+            BeltSize.LARGE).hashCode(), belt.hashCode());
+    assertEquals(new Footwear("fast footwear", new int[]{0, 0, 21, 0}).hashCode(),
+            footwear.hashCode());
+    assertEquals(new Headgear("stupid headwear", new int[]{0, -50, 0, 0}).hashCode(),
+            headgear.hashCode());
+    assertEquals(new Potion("APTX 4869", new int[]{0, 0, 0, 999}).hashCode(),
+            potion.hashCode());
   }
 
   @Test

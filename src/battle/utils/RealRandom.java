@@ -1,10 +1,13 @@
 package battle.utils;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.Objects;
 import java.util.Random;
 
+/**
+ * This the concrete class for RandomValue that is used to generate
+ * real random values or serials when playing the game.
+ */
 public class RealRandom implements RandomValue {
   private int lowerBound;
   private int upperBound;
@@ -38,8 +41,12 @@ public class RealRandom implements RandomValue {
 
   @Override
   public boolean equals(Object o) {
-    if (this == o) return true;
-    if (o == null || getClass() != o.getClass()) return false;
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
     RealRandom that = (RealRandom) o;
     return lowerBound == that.lowerBound && upperBound == that.upperBound;
   }

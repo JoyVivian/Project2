@@ -1,15 +1,21 @@
 package battle.euipments;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-
 import battle.utils.RandomFactory;
 import battle.utils.RandomValue;
+import java.util.ArrayList;
 
+/**
+ * This class is used to create equipmentbag instance. The bag constains
+ * 40 gears that players can use the methods inside this class to choose
+ * their gears randomly.
+ */
 public class Bag {
   private ArrayList<Gear> gears = new ArrayList<>();
 
+  /**
+   * This is constructor for Bag class. When constructed,
+   * the instance would contain 40 gears.
+   */
   public Bag() {
     Headgear headgear1 = new Headgear("fighting headgear", new int[]{0, 2, 0, 0});
     Headgear headgear2 = new Headgear("stupid headgear", new int[]{0, -1, 0, 0});
@@ -23,12 +29,12 @@ public class Bag {
     Footwear footwear4 = new Footwear("beautiful footwear", new int[]{0, 0, 5, 0});
     Footwear footwear5 = new Footwear("poor footwear", new int[]{0, 0, -9, 0});
 
-    Belt belt1 = new Belt("lovely belt", new int[]{0, 0, 1, 0}, BeltSize.SMALL);
+    Belt belt1 = new Belt("lovely belt", new int[]{50, 0, 1, 0}, BeltSize.SMALL);
     Belt belt2 = new Belt("tight belt", new int[]{0, -5, 0, 0}, BeltSize.SMALL);
     Belt belt3 = new Belt("gold belt", new int[]{0, 2, 3, 0}, BeltSize.MEDIUM);
     Belt belt4 = new Belt("heavy belt", new int[]{9, 0, 0, 9}, BeltSize.LARGE);
     Belt belt5 = new Belt("power belt", new int[]{0, 4, 1, 0}, BeltSize.LARGE);
-    Belt belt6 = new Belt("poor belt", new int[]{0, -1, 0, -2}, BeltSize.LARGE);
+    Belt belt6 = new Belt("poor belt", new int[]{19, -1, 0, -2}, BeltSize.LARGE);
     Belt belt7 = new Belt("garbage belt", new int[]{7, 1, 0, 0}, BeltSize.MEDIUM);
     Belt belt8 = new Belt("cool belt", new int[]{-7, 0, 0, 10}, BeltSize.MEDIUM);
     Belt belt9 = new Belt("silk belt", new int[]{0, 0, 0, 5}, BeltSize.SMALL);
@@ -39,19 +45,19 @@ public class Bag {
     Belt belt14 = new Belt("strong belt", new int[]{1, 2, 0, 0}, BeltSize.LARGE);
     Belt belt15 = new Belt("silver belt", new int[]{7, 2, 0, 0}, BeltSize.MEDIUM);
 
-    Potion potion1 = new Potion("APTX 4869", new int[]{0, 0, 0 ,999});
+    Potion potion1 = new Potion("APTX 4869", new int[]{0, 0, 0, 999});
     Potion potion2 = new Potion("strong medicine", new int[]{6, 0, 0, 0});
-    Potion potion3 = new Potion("painKiller", new int[]{0, 3, 0, 0});
+    Potion potion3 = new Potion("painKiller", new int[]{70, 0, 0, 0});
     Potion potion4 = new Potion("small blood medicine", new int[]{0, 1, 0, 0});
     Potion potion5 = new Potion("toxic", new int[]{0, -1, 0, 0});
     Potion potion6 = new Potion("large blood medicine", new int[]{0, 1, 0, 0});
-    Potion potion7 = new Potion("small charming medicine", new int[]{0, 0, 0, 1});
+    Potion potion7 = new Potion("small charming medicine", new int[]{28, 0, 0, 0});
     Potion potion8 = new Potion("medium charming medicine", new int[]{0, 0, 0, 1});
     Potion potion9 = new Potion("trioxide", new int[]{-2, 0, 0, 0});
     Potion potion10 = new Potion("large charming medicine", new int[]{0, 0, 0, 99});
     Potion potion11 = new Potion("small dexterity medicine", new int[]{0, 0, 1, 0});
-    Potion potion12 = new Potion("alcohol", new int[]{0, 0, -5, 0});
-    Potion potion13 = new Potion("medium dexterity medicine", new int[]{0, 0, 3, 0});
+    Potion potion12 = new Potion("alcohol", new int[]{90, 0, 0, 0});
+    Potion potion13 = new Potion("medium dexterity medicine", new int[]{-30, 0, 3, 0});
     Potion potion14 = new Potion("large dexterity medicine", new int[]{0, 0, 6, 0});
     Potion potion15 = new Potion("strength medicine", new int[]{3, 0, 0, 0});
 
@@ -100,6 +106,12 @@ public class Bag {
     gears.add(potion15);
   }
 
+  /**
+   * This method is used to choose 20 gears from the bag instance randomly.
+   *
+   * @param type Represents generating random values for game logic or for tests.
+   * @return An ArrayList of 20 randomly choosed gears.
+   */
   public ArrayList<Gear> getGears(String type) {
     ArrayList<Gear> onePlayerGears = new ArrayList<>();
     RandomFactory randomFactory = new RandomFactory();
@@ -115,6 +127,13 @@ public class Bag {
     return onePlayerGears;
   }
 
+  /**
+   * After randomly choosing 20 gears, get another 20 remained gears
+   * in the bag.
+   *
+   * @param usedGears An ArrayList of used gears.
+   * @return An ArrayList of 20 remained gears.
+   */
   public ArrayList<Gear> getRemainGears(ArrayList<Gear> usedGears) {
     ArrayList<Gear> remainGears = new ArrayList<>();
 

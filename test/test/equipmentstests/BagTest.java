@@ -1,4 +1,4 @@
-package test.equipmentsTests;
+package test.equipmentstests;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -15,6 +15,9 @@ import battle.euipments.Potion;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * A class is used to test Bag class.
+ */
 public class BagTest {
   private Bag bag;
   private ArrayList<Gear> usedGears = new ArrayList<>();
@@ -87,7 +90,7 @@ public class BagTest {
     Belt belt12 = new Belt("iron belt", new int[]{100, 0, 0, 0}, BeltSize.LARGE);
     Belt belt14 = new Belt("strong belt", new int[]{12, 23, 0, 0}, BeltSize.LARGE);
 
-    Potion potion1 = new Potion("APTX 4869", new int[]{0, 0, 0 ,999});
+    Potion potion1 = new Potion("APTX 4869", new int[]{0, 0, 0, 999});
     Potion potion3 = new Potion("painKiller", new int[]{0, 34, 0, 0});
     Potion potion5 = new Potion("toxic", new int[]{0, -100, 0, 0});
     Potion potion7 = new Potion("small charming medicine", new int[]{0, 0, 0, 1});
@@ -122,7 +125,7 @@ public class BagTest {
   }
 
   @Test
-  public void getGears() {;
+  public void getGears() {
     assertEquals(usedGears, bag.getGears("FalseRandom"));
   }
 

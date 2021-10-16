@@ -1,18 +1,18 @@
-package test.utilsTest;
+package test.utilstest;
 
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Iterator;
-
 import battle.utils.FalseRandom;
-import battle.utils.RealRandom;
 
-import static org.junit.Assert.*;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
+
+/**
+ * A class that is used to test FalseRandom class.
+ */
 public class FalseRandomTest {
   private FalseRandom falseRandom;
 

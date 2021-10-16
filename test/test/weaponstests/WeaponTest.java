@@ -1,4 +1,4 @@
-package test.weaponsTests;
+package test.weaponstests;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -12,6 +12,9 @@ import battle.weapons.Weapon;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * A class that is used to test Weapon Class.
+ */
 public class WeaponTest {
   private Weapon axe;
   private Weapon broadSwords;
@@ -61,7 +64,8 @@ public class WeaponTest {
     assertEquals(new Boradswords("golden sword", "FalseRandom").hashCode(), broadSwords.hashCode());
     assertEquals(new Flail("silver flail", "FalseRandom").hashCode(), flail.hashCode());
     assertEquals(new Katanas("heavy katanas", "FalseRandom").hashCode(), katanas.hashCode());
-    assertEquals(new TwoHandedSwords("super twohandswords", "FalseRandom").hashCode(), twoHandedSwords.hashCode());
+    assertEquals(new TwoHandedSwords("super twohandswords", "FalseRandom").hashCode(),
+            twoHandedSwords.hashCode());
   }
 
   @Test

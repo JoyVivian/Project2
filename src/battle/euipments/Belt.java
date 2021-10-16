@@ -1,10 +1,19 @@
 package battle.euipments;
 
-import java.util.Arrays;
-
+/**
+ * Belt is a gear. Belt class is used to create belt objects.
+ * belt has a field separate from other gears which is beltsize.
+ */
 public class Belt extends Gear {
   private BeltSize beltSize;
 
+  /**
+   * Constructor of Belt class and is used to construct Belt objects.
+   *
+   * @param name          The name of this belt gear.
+   * @param affectedAttrs An array that represents a player's four basic abilities separately.
+   * @param beltSize      BeltSize Enum to represent the size of the belt object.
+   */
   public Belt(String name, int[] affectedAttrs, BeltSize beltSize) {
     //TODO: Add some constraints here to make sure only affect two attrs.
     super(name, affectedAttrs);
@@ -21,9 +30,9 @@ public class Belt extends Gear {
   public int compareImpl(Belt o) {
     if (this.name.compareTo(o.getName()) > 0) {
       return -1;
-    }else if (this.name.compareTo(o.getName()) < 0) {
+    } else if (this.name.compareTo(o.getName()) < 0) {
       return 1;
-    }else {
+    } else {
       return 0;
     }
   }

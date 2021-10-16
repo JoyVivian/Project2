@@ -1,4 +1,4 @@
-package test.weaponsTests;
+package test.weaponstests;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -7,8 +7,11 @@ import battle.weapons.Armory;
 import battle.weapons.Flail;
 import battle.weapons.Weapon;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
+/**
+ * A class that is used to test Armory class.
+ */
 public class ArmoryTest {
   private Armory armory;
 

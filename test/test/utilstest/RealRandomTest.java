@@ -1,18 +1,20 @@
-package test.utilsTest;
+package test.utilstest;
 
 
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 
-import battle.euipments.Headgear;
+
 import battle.utils.RealRandom;
-import battle.weapons.Armory;
+
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
+/**
+ * A class that is used to test RealRandom class.
+ */
 public class RealRandomTest {
   private RealRandom randomValue1;
   private RealRandom randomValue2;

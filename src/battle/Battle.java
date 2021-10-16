@@ -1,8 +1,5 @@
 package battle;
 
-import java.util.ArrayList;
-import java.util.Collections;
-
 import battle.euipments.Bag;
 import battle.euipments.Belt;
 import battle.euipments.Footwear;
@@ -12,44 +9,63 @@ import battle.euipments.Potion;
 import battle.weapons.Armory;
 import battle.weapons.Katanas;
 import battle.weapons.Weapon;
+import java.util.ArrayList;
+import java.util.Collections;
 
+/**
+ * Battle has two players and one equipment bag and one armory.
+ * This class contains methods to assign gears and weapons to two players
+ * and return their fighting information.
+ */
 public class Battle {
   private ArrayList<Player> players;
   private Bag equipmentBag;
   private Armory armory;
 
+  /**
+   * A constructor of Battle that build Battle objects.
+   *
+   * @param players      An ArrayList that contains two players.
+   * @param equipmentBag An ArrayList of gears that can be assigned to players.
+   * @param armory       An ArrayList of weapons that can be assigned to players.
+   */
   public Battle(ArrayList<Player> players, Bag equipmentBag, Armory armory) {
     this.players = players;
     this.equipmentBag = equipmentBag;
     this.armory = armory;
-
-    Player player1 = this.players.get(0);
-    Player player2 = this.players.get(1);
-
   }
 
+  /**
+   * Assign gears to two player randomly.
+   *
+   * @param type Represents which RandomValue object to generate.
+   * @return A string shows the information of gears that were assigned to each player.
+   */
   public String assignGears(String type) {
     Player player1 = this.players.get(0);
-    Player player2 = this.players.get(1);
+
+
     ArrayList<Gear> player1Gears = equipmentBag.getGears(type);
     ArrayList<Gear> filteredPlayer1Gears = this.filterGears(player1Gears);
+
     Collections.sort(filteredPlayer1Gears);
     player1.setGears(filteredPlayer1Gears);
 
     //Make sure that two players use different gears.
+    Player player2 = this.players.get(1);
     ArrayList<Gear> player2Gears = equipmentBag.getRemainGears(player1Gears);
     ArrayList<Gear> filteredPlayer2Gears = this.filterGears(player2Gears);
     Collections.sort(filteredPlayer2Gears);
     player2.setGears(filteredPlayer2Gears);
 
-    player1.setHealth(player1.getEnhancedStrength() + player1.getEnhancedConstitution() +
-            player1.getEnhancedDexterity() + player1.getEnhancedCharisma());
+    player1.setHealth(player1.getEnhancedStrength() + player1.getEnhancedConstitution()
+            + player1.getEnhancedDexterity() + player1.getEnhancedCharisma());
 
-    player2.setHealth(player2.getEnhancedStrength() + player2.getEnhancedConstitution() +
-            player2.getEnhancedDexterity() + player2.getEnhancedCharisma());
+    player2.setHealth(player2.getEnhancedStrength() + player2.getEnhancedConstitution()
+            + player2.getEnhancedDexterity() + player2.getEnhancedCharisma());
 
-    return String.format("Gears for Player1: \n %s \n Gears for Player2: \n %s \n"
-            , filteredPlayer1Gears, filteredPlayer2Gears);
+    return String.format("Gears for Player1: \n %s \n Gears for Player2: \n %s \n",
+            filteredPlayer1Gears, filteredPlayer2Gears);
   }
 
   private ArrayList<Gear> filterGears(ArrayList<Gear> playerGears) {
@@ -71,19 +87,27 @@ public class Battle {
       } else if (gear instanceof Belt && !isBeltFull) {
         //Calculate Belt Unit.
         switch (((Belt) gear).getBeltSize()) {
-          case SMALL -> beltUnit += 1;
-          case MEDIUM -> beltUnit += 2;
-          case LARGE -> beltUnit += 4;
+          case SMALL:
+            beltUnit += 1;
+            break;
+          case MEDIUM:
+            beltUnit += 2;
+            break;
+          case LARGE:
+            beltUnit += 4;
+            break;
+          default:
+            break;
         }
 
         if (beltUnit <= 10) {
           filteredGears.add(gear);
-        }else {
+        } else {
           isBeltFull = true;
         }
-      } else if (gear instanceof Potion){
+      } else if (gear instanceof Potion) {
         filteredGears.add(gear);
-      }else {
+      } else {
         continue;
       }
     }
@@ -91,24 +115,24 @@ public class Battle {
     return filteredGears;
   }
 
+  /**
+   * Assign weapons to two players.
+   *
+   * @param type Represents which RandomValue object to generate.
+   * @return A String shows the information of weapons that were assigned to each player.
+   */
   public String assignWeapon(String type) {
     Player player1 = this.players.get(0);
     Player player2 = this.players.get(1);
 
-    //TODO: it will always return the upperbound and cause two players have the same weapon.
     ArrayList<Weapon> weapons1 = this.getOneWeapon(type);
     ArrayList<Weapon> weapons2 = this.getRemainWeapon(type, weapons1);
-
-    //Make sure that two players will get different weapons.ß
-//    while (weapons2.equals(weapons1)) {
-//      weapons2 = this.getOneWeapon(type);
-//    }
 
     player1.setWeapon(weapons1);
     player2.setWeapon(weapons2);
 
-    return String.format("Weapon for Player1: %s\n Weapon for Player2: %s"
-            , weapons1.toString(), weapons2.toString());
+    return String.format("Weapon for Player1: %s\n Weapon for Player2: %s",
+            weapons1.toString(), weapons2.toString());
   }
 
   private ArrayList<Weapon> getRemainWeapon(String type, ArrayList<Weapon> weapons) {
@@ -129,6 +153,12 @@ public class Battle {
     return weapons;
   }
 
+  /**
+   * A method that make two players fight and return the fighting information.
+   *
+   * @param type Represents which RandomValue object to generate.
+   * @return A string contains the fighting information of two players.
+   */
   public String fight(String type) {
     String fightInfo = "";
 
@@ -150,9 +180,9 @@ public class Battle {
 
     if (player1.getHealth() > 0 && player2.getHealth() > 0 && roundCount >= 100) {
       fightInfo += String.format("The match come to a draw.");
-    }else if (player1.getHealth() <= 0 && player2.getHealth() > 0) {
+    } else if (player1.getHealth() <= 0 && player2.getHealth() > 0) {
       fightInfo += String.format("Player %s is the winner.\n", player2.getName());
-    } else if (player2.getHealth() <= 0 && player1.getHealth() > 0){
+    } else if (player2.getHealth() <= 0 && player1.getHealth() > 0) {
       fightInfo += String.format("Player %s is the winner.\n", player1.getName());
     }
 

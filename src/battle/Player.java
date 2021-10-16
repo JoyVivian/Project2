@@ -1,15 +1,21 @@
 package battle;
 
-import java.util.ArrayList;
-import java.util.Collections;
-
 import battle.euipments.Gear;
 import battle.utils.RandomFactory;
 import battle.utils.RandomValue;
 import battle.weapons.Flail;
 import battle.weapons.TwoHandedSwords;
 import battle.weapons.Weapon;
+import java.util.ArrayList;
+import java.util.Collections;
 
+/**
+ * This class is used to create player instances.
+ * A player can have some basic attributes and this
+ * class stores these attributes and help calculalate
+ * their enhanced attributes when they wear gears and use
+ * weapons.
+ */
 public class Player {
   private String name;
   private int strength;
@@ -20,10 +26,13 @@ public class Player {
   private ArrayList<Weapon> weapon = new ArrayList<>();
   private ArrayList<Gear> gears = new ArrayList<>();
 
-  public String getName() {
-    return name;
-  }
-
+  /**
+   * A constructor of Player to build Player class.
+   *
+   * @param name The name of the player.
+   * @param type Represents which RandomValue object to generate.
+   * @throws IllegalArgumentException When the parameter is null, it will throw IAE.
+   */
   public Player(String name, String type) throws IllegalArgumentException {
     if (name == null) {
       throw new IllegalArgumentException("The name of a player can not be null.");
@@ -39,6 +48,15 @@ public class Player {
             + this.getEnhancedDexterity() + this.getCharisma();
   }
 
+  /**
+   * Get the name of the Player.
+   *
+   * @return A string contains the player's name.
+   */
+  public String getName() {
+    return name;
+  }
+
   private int getDice(String type) {
     RandomFactory randomFactory = new RandomFactory();
     RandomValue randomValueIns = randomFactory.createRandomInstance(type, 1, 6);
@@ -49,26 +67,56 @@ public class Player {
     return randomValue;
   }
 
+  /**
+   * Get the strength of the Player.
+   *
+   * @return A string contains the player's strength.
+   */
   public int getStrength() {
     return strength;
   }
 
+  /**
+   * Get the constitution of the player.
+   *
+   * @return A string contains the player's constitution.
+   */
   public int getConstitution() {
     return constitution;
   }
 
+  /**
+   * Get the dexterity of the player.
+   *
+   * @return A string contains the player's dexterity.
+   */
   public int getDexterity() {
     return dexterity;
   }
 
+  /**
+   * Get the charisma of the player.
+   *
+   * @return A string contains the player's charisma.
+   */
   public int getCharisma() {
     return charisma;
   }
 
+  /**
+   * Get the health of the player.
+   *
+   * @return A Integer contains the player's health.
+   */
   public int getHealth() {
     return health;
   }
 
+  /**
+   * Get the strength of the player after wearing gears.
+   *
+   * @return A Integer contains the player's strength after wearing gears.
+   */
   public int getEnhancedStrength() {
     int enhancedStrength = 0;
     for (Gear gear : gears) {
@@ -79,6 +127,11 @@ public class Player {
     return enhancedStrength;
   }
 
+  /**
+   * Get the constitution of the player after wearing gears.
+   *
+   * @return A Integer contains the player's constitution after wearing gears.
+   */
   public int getEnhancedConstitution() {
     int enhancedConstitution = 0;
     for (Gear gear : gears) {
@@ -89,6 +142,11 @@ public class Player {
     return enhancedConstitution;
   }
 
+  /**
+   * Get the dexterity of the player after wearing gears.
+   *
+   * @return A Integer contains the player's dexterity after wearing gears.
+   */
   public int getEnhancedDexterity() {
     int enhancedDexterity = 0;
     for (Gear gear : gears) {
@@ -99,6 +157,11 @@ public class Player {
     return enhancedDexterity;
   }
 
+  /**
+   * Get the charisma of the player after wearing gears.
+   *
+   * @return A Integer contains the player's charisma after wearing gears.
+   */
   public int getEnhancedCharisma() {
     int enhancedCharisma = 0;
     for (Gear gear : gears) {
@@ -109,27 +172,12 @@ public class Player {
     return enhancedCharisma;
   }
 
-  private int[] getTempAttrs() {
-    int[] tmpAttrs = new int[4];
-
-    for (Gear gear : this.gears) {
-      int[] eachGearAttrs = gear.getAffectedAttrs();
-      for (int i = 0; i < 4; i++) {
-        tmpAttrs[i] = eachGearAttrs[i];
-      }
-    }
-
-    tmpAttrs[0] += this.strength;
-    tmpAttrs[1] += this.constitution;
-    tmpAttrs[2] += this.dexterity;
-    tmpAttrs[3] += this.charisma;
-
-    return tmpAttrs;
-  }
-
+  /**
+   * Get the Striking power of the player after wearing gears.
+   *
+   * @return A Integer contains the player's striking power after wearing gears.
+   */
   public int getStrikingPower(String type) {
-
-
     RandomFactory randomFactory = new RandomFactory();
     RandomValue randomValueIns = randomFactory.createRandomInstance(type, 1, 10);
     int randomValue = randomValueIns.getRandomValue();
@@ -139,6 +187,11 @@ public class Player {
     return strikingPower;
   }
 
+  /**
+   * Get the avoidance ability of the player after wearing gears.
+   *
+   * @return A Integer contains the player's avoidance ability after wearing gears.
+   */
   public int getAvoidanceAbility(String type) {
     RandomFactory randomFactory = new RandomFactory();
     RandomValue randomValueIns = randomFactory.createRandomInstance(type, 1, 6);
@@ -149,6 +202,11 @@ public class Player {
     return avoidanceAbility;
   }
 
+  /**
+   * Get the potential damage of the player after wearing gears.
+   *
+   * @return A Integer contains the player's potential damage after wearing gears.
+   */
   public int getPotentialDamage(String type) {
     int potentialDamage = 0;
 
@@ -169,32 +227,56 @@ public class Player {
 
     }
 
-    potentialDamage += this.getEnhancedStrength();
+    potentialDamage += this.getEnhancedStrength() ;
     return potentialDamage;
   }
 
+  /**
+   * Assign a weapon to the player.
+   *
+   * @param weapon An ArrayList of Weapon that should assign to player.
+   */
   public void setWeapon(ArrayList<Weapon> weapon) {
     this.weapon = weapon;
   }
 
+  /**
+   * Assign gears to the player.
+   *
+   * @param gears An ArrayList of Gears that should assign to player.
+   */
   public void setGears(ArrayList<Gear> gears) {
     Collections.sort(gears);
     this.gears = gears;
   }
 
+  /**
+   * Return basic information of a player.
+   *
+   * @return A string contains the basic information of a player.
+   */
   public String playerBasicInfo() {
     //basic information.
-    String basicInfo = String.format("Name: %s, Strength: %s, Constitution: %s, Dexterity: %s, Charisma: %s"
-            , this.name, String.valueOf(this.strength), String.valueOf(this.constitution)
-            , String.valueOf(this.dexterity), String.valueOf(this.charisma)
+    String basicInfo = String.format("Name: %s, Strength: %s, Constitution: %s,"
+                    + " Dexterity: %s, Charisma: %s",
+            this.name, String.valueOf(this.strength), String.valueOf(this.constitution),
+            String.valueOf(this.dexterity), String.valueOf(this.charisma)
     );
     return basicInfo;
   }
 
+  /**
+   * Return attributes of the player after they wear gears and use a weapon.
+   *
+   * @param type Represents which RandomValue object to generate.
+   * @return A string contains the attributes information of a player
+   *     after they wear gears and use a weapon.
+   */
   public String playerEnhancedInfo(String type) {
     //enhanced information.
-    String enhancedInfo = String.format("Name: %s, Strength: %s, Constitution: %s, Dexterity: %s, Charisma: %s " +
-                    "Health: %s" + " StrikingPower: %s " + "AvoidAbility: %s",
+    String enhancedInfo = String.format("Name: %s, Strength: %s, Constitution: %s, "
+                    + "Dexterity: %s, Charisma: %s "
+                    + "Health: %s" + " StrikingPower: %s " + "AvoidAbility: %s",
             this.name, this.getEnhancedStrength(), this.getEnhancedConstitution(),
             this.getEnhancedDexterity(), this.getEnhancedCharisma(), this.getHealth(),
             this.getStrikingPower(type), this.getAvoidanceAbility(type)
@@ -203,6 +285,11 @@ public class Player {
     return enhancedInfo;
   }
 
+  /**
+   * Set the health field of the player.
+   *
+   * @param health The health value that should be set to.
+   */
   public void setHealth(int health) {
     this.health = health;
   }
